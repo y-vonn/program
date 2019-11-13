@@ -1,0 +1,58 @@
+.container{
+    padding: 20rpx 0;
+}
+.chat-view{
+
+}
+.chat-view .user{
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    width: 100%;
+}
+.chat-view .user-head{
+    margin: 8rpx 20rpx 8rpx 30rpx;
+}
+.chat-view .info{
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    flex-grow: 1;
+    height: 90rpx;
+    padding: 8rpx 0 8rpx 0;
+    border-bottom: 1px solid #979797;
+}
+.chat-view .user-info{
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column nowrap;
+    flex-grow: 1;
+}
+.chat-view .chat-info{
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-right:15rpx;
+}
+.chat-view .name-m{
+    font-size: 26rpx;
+    font-family: PingFangSC-Regular,PingFang SC;
+    font-weight: 400;
+    color: rgba(153,153,153,1);
+}
+.chat-view .name-s{
+    font-size: 20rpx;
+    font-family: PingFangSC-Regular,PingFang SC;
+    font-weight: 400;
+    color: rgba(153,153,153,1);
+}
+.chat-view .time{
+    margin-top: 13rpx;
+    font-size:20rpx;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    color:rgba(153,153,153,1);
+}
