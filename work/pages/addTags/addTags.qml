@@ -1,8 +1,11 @@
 <view class="row">
     <view class="v" qq:for="{{sysTags}}" wx:key="*this" qq:for-item="i">
-            <button class="tagButton">
-                <text>{{i}}</text>
+            <button qq:if="{{i.isSelect}}" class="tagButtonSelct">
+                <text>{{i.tag}}</text>
             </button> 
+            <button qq:elif="{{!i.isSelect}}" class="tagButton">
+                <text>{{i.tag}}</text>
+            </button>
     </view>
     <view qq:if="{{showInput}}">
         <view class="createTag">

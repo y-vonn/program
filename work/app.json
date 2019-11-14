@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/addTags/addTags",
     "pages/index/index",
     "pages/chatTop/chatTop",
     "pages/chatPage/chatPage",
