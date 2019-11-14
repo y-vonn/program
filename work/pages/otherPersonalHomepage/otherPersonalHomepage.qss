@@ -1,0 +1,105 @@
+.user-nickname{
+    position: absolute;
+    color:#333333;
+    font-size:34rpx;
+    top: 85rpx;
+    left: 316rpx;
+}
+
+.weChat{
+    position: absolute;
+    top: 142rpx;
+    left: 310rpx;
+    width:118rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    border-radius: 23.5rpx;
+    background-color: #6385F4;
+    border: 1rpx solid #5A7AE2;
+}
+
+.weChat text{
+    font-size: 26rpx;
+    color:#FFFFFF;
+    font-family: PingFangSC-Regular,PingFang SC;
+}
+
+.user-avatar{
+    position: absolute;
+    top: 48rpx;
+    left: 80rpx;
+    width: 180rpx;
+    height: 180rpx;
+    border-radius: 90rpx;
+}
+
+
+.personalInfo{
+    position: absolute;
+    left: 80rpx;
+    top: 279rpx;
+    color: #666666;
+    font-size: 26rpx;
+    font-family: PingFangSC-Regular,PingFang SC;
+}
+
+.personalSign{
+    position: absolute;
+    left: 80rpx;
+    top: 336rpx;
+    color: #666666;
+    font-size: 26rpx;
+    font-family: PingFangSC-Regular,PingFang SC;
+}
+
+.personalTag{
+    position: absolute;
+    left: 80rpx;
+    top: 387rpx;
+    color: #666666;
+    font-size: 26rpx;
+    font-family: PingFangSC-Regular,PingFang SC;
+}
+
+.myTag{
+    position: absolute;
+    top: 436rpx;
+    left: 20rpx;
+    width:710rpx;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+}
+
+.tag{
+    font-size:26rpx;
+    font-family: PingFangSC-Regular,PingFang SC;
+}
+
+.tagButton{
+    width:150rpx;
+    height: 50rpx;
+    margin: 10rpx 10rpx;
+    border:1rpx solid #979797;
+    border-radius:25rpx;
+    color:#ECA733;
+    line-height:50rpx;
+}
+
+.otherPhotoWall{
+    color:#333333;
+    font-size:26rpx;
+    margin-top:20rpx;
+    margin-bottom:10rpx;
+    width:590rpx;
+    font-family:PingFangSC-Regular,PingFang SC;
+}
+
+.photoWall{
+    width:224rpx;
+    height:340rpx;
+    margin: 0rpx 4.5rpx;
+}
+

@@ -1,0 +1,114 @@
+.userInfo-avatar{
+    position: absolute;
+    top: 30rpx;
+    left: 285rpx;
+    width: 180rpx;
+    height: 180rpx;
+    border-radius: 90rpx;
+}
+
+.userInfo-nickname{
+    position: absolute;
+    top: 226rpx;
+    left: 290rpx;
+    width:170rpx;
+    text-align:center;
+    font-size:34rpx;
+    color:#333333;
+    font-family: PingFangSC-Regular,PingFang SC;
+}
+
+.basicInfo{
+    position: absolute;
+    top: 334rpx;
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+}
+
+.info{
+    margin:6rpx 10rpx;
+    background:#E9E9E9;
+    height:40rpx;
+    color:#333333;
+    border: 1rpx solid #979797;
+    font-size:20rpx;
+    border-radius:10rpx;
+    line-height:40rpx;
+}
+
+.userInfo-personalSign{
+    position: absolute;
+    top: 274rpx;
+    left: 221rpx;
+    width:308rpx;
+    font-size:22rpx;
+    text-align:center;
+    text-overflow:ellipsis;
+    word-wrap:break-word;
+    color:#9B9B9B;
+    font-family: PingFangSC-Regular,PingFang SC;
+}
+
+.myTags{
+    position: absolute;
+    top: 405rpx;
+    left: 80rpx;
+    font-size:26rpx;
+    color:#333333;
+    font-family: PingFangSC-Regular,PingFang SC;
+}
+
+.addTag{
+    width:100rpx;
+    height:50rpx;
+    margin:6rpx 10rpx;
+    color:#ECA733;
+    border-radius:35rpx;
+    border:1rpx solid #ECA733;
+    line-height:50rpx;
+}
+
+.myTag{
+    position: absolute;
+    top: 454rpx;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+}
+
+.tag{
+    font-size:26rpx;
+    font-family: PingFangSC-Regular,PingFang SC;
+}
+
+.tagButton{
+    margin:6rpx 10rpx;
+    width:150rpx;
+    height: 50rpx;
+    border:1rpx solid #979797;
+    border-radius:25rpx;
+    color:#ECA733;
+    background:#D8D8D8;
+    line-height:50rpx;
+}
+
+.myPhotoWall{
+    color:#333333;
+    font-size:26rpx;
+    margin-top:30rpx;
+    width:590rpx;
+    font-family:PingFangSC-Regular,PingFang SC;
+}
+
+.photoWall{
+    width:224rpx;
+    height:340rpx;
+    margin-top:9rpx;
+    margin-right:9rpx;
+}
