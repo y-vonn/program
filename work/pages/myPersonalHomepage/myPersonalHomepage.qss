@@ -43,12 +43,13 @@
 .userInfo-personalSign{
     position: absolute;
     top: 274rpx;
-    left: 221rpx;
-    width:308rpx;
+    left: 100rpx;
+    width:550rpx;
     font-size:22rpx;
     text-align:center;
     text-overflow:ellipsis;
-    word-wrap:break-word;
+    overflow: hidden;
+    white-space: nowrap;
     color:#9B9B9B;
     font-family: PingFangSC-Regular,PingFang SC;
 }
@@ -94,7 +95,7 @@
     border:1rpx solid #979797;
     border-radius:25rpx;
     color:#ECA733;
-    background:#D8D8D8;
+    background:#6385F4;
     line-height:50rpx;
 }
 
@@ -111,4 +112,23 @@
     height:340rpx;
     margin-top:9rpx;
     margin-right:9rpx;
+}
+
+.infoConfirm{
+    position:absolute;
+    top: 93rpx;
+    left: 590rpx;
+    width: 180rpx;
+    height: 54rpx;
+    background:#E7E7E7;
+    border-bottom-left-radius: 27px;
+    border-top-left-radius: 27px;
+    border: 1rpx solid #979797;
+    line-height:54rpx;
+}
+
+.infoConfirm text{
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-size: 28rpx;
+    color: #999999;
 }

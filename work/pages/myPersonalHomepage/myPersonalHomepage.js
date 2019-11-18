@@ -4,7 +4,7 @@ Page({
             avatarUrl:"../image/avatar.png",
             nickname: "grape",
             personalInfo:"23岁/北京航空航天大学/白羊座",
-            personalSign:"------------",
+            personalSign:"-----------------------------",
             personalTag:"eee",
             photos:["../image/t.png","../image/t.png","../image/t.png","../image/t.png","../image/t.png","../image/t.png",],
             tags:['中国人','aewfw','awefawf','wa','wafwe','wafeeee','eee'],

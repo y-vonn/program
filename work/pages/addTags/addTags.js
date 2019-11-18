@@ -86,12 +86,12 @@ Page({
     //后台传回来的tags，遍历，若在indexmap中，则置true，否则添加新的进去，置true，若用户添加新标签，
     //更新tags数组，sys添加新的，置true， isSelect用来显示不同class
     init:function(){
-        var userTags=[]; //获取Globaltags数组或者是字符串
+        var userTags=["帅气"]; //获取Globaltags数组或者是字符串
         var indexMap = this.data.indexMap;
         var sysTags = this.data.sysTags;
         for(var t in userTags){
-            if(indexMap.hasOwnProperty()){
-                var index = indexMap[t];
+            if(indexMap.hasOwnProperty(userTags[t])){
+                var index = indexMap[userTags[t]];
                 sysTags[index].isSelect = true;
             }else{
                 sysTags.push({tag:t,isSelect: true});
@@ -109,16 +109,32 @@ Page({
     },
     createTag:function(e){
         if(this.data.tag!="")
-            this.data.sysTags=[{tag:this.data.tag, isSelect:true}].concat(this.data.sysTags);
+            this.data.sysTags=this.data.sysTags.concat([{tag:this.data.tag, isSelect:true}]);
         this.setData({
             showInput:false,
             sysTags:this.data.sysTags,
             tag:''
         });
     },
+    statusChange:function(e){
+        var map = this.data.sysTags;
+        var tag = e.currentTarget.dataset.tag;
+        for(var t in map){
+            if(map[t].tag==tag){
+                map[t].isSelect = !map[t].isSelect;
+            }
+        }
+        this.setData({
+            sysTags:map
+        })
+    },
+
     tagInput:function(e){
         this.setData({
             tag:e.detail.value
         })
+    },
+    onLoad:function(){
+        this.init();
     }
 });

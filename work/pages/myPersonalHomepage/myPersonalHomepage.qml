@@ -1,15 +1,21 @@
 <view>
     <image bindtap="changeAvatar" class="userInfo-avatar" src="{{userInfo.avatarUrl}}"></image>
-    <text class="userInfo-nickname">{{userInfo.nickname}}</text>
-    <text class="userInfo-personalSign">{{userInfo.personalSign}}</text>
-    <text class="myTags">我的标签</text>
+    <button bindtap="infoConfirm" class="infoConfirm">
+        <text>实名认证</text>
+    </button>
+    <view>
+        <text class="userInfo-nickname">{{userInfo.nickname}}</text>
+    </view>
+    <view>
+        <text class="userInfo-personalSign">{{userInfo.personalSign}}</text>
+    </view>
     <view class="basicInfo">
         <text class="info">{{userInfo.age}}</text>
         <text class="info">{{userInfo.star}}</text>
         <text class="info">{{userInfo.school}}</text>
         <button class="info" bindtap="editInfo">编辑资料</button>
     </view>
-
+    <text class="myTags">我的标签</text>
     <view class="myTag">
         <button bindtap="addTags" class="addTag">
             <text>+</text>

@@ -1,12 +1,21 @@
 {
   "pages":[
+    "pages/myPersonalHomepage/myPersonalHomepage",
     "pages/addTags/addTags",
+    "pages/changeAvatar/changeAvatar",
+    "pages/editMyInfo/editMyInfo",
+    "pages/otherPersonalHomepage/otherPersonalHomepage",
+    "pages/personalSign/personalSign",
+    "pages/editNickname/editNickname",
     "pages/index/index",
     "pages/chatTop/chatTop",
     "pages/chatPage/chatPage",
     "pages/logs/logs"
   ],
   "tabBar": {
+    "color":"",
+    "selectedColor":"",
+    "backgroundColor":"",
     "list": [
       {
         "pagePath": "pages/chatTop/chatTop",
