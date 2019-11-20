@@ -1,13 +1,7 @@
+const app = getApp();
 Page({
     data:{
-        id:'12316546',
-        school:'北京邮电大学',
-        nickname:'grape',
-        birthday:'',
-        star:'',
-        age:'',
-        personalSign:'',
-    
+        userInfo:{},    
         count:[1,2,3,4,5,6,7],
         infoList:["ID","所在学校","昵称","出生日期","星座","年龄","个性签名"],
         imageList:["../image/t.png","../image/t.png","../image/t.png","../image/t.png","../image/t.png","../image/t.png"],
@@ -15,8 +9,15 @@ Page({
     },
 
     //通过获取的唯一id向后台提取用户信息，或者其他页面提取保存后，将信息保存为global取用
-    onload:function(){
-        
+    onLoad(){
+        this.init();
+        console.log(app.globalData);
+    },
+    // 页面加载同步信息
+    init:function(){
+        this.setData({
+            userInfo: app.globalData.ourUserInfo
+        })
     },
 
     //用户修改了基本信息，并按了返回或保存，将信息更新到后台和global

@@ -1,5 +1,10 @@
 {
   "pages":[
+    "pages/login/login",
+    "pages/index/index",
+    "pages/inputNameAndSchool/inputNameAndSchool",
+    "pages/selectAvatar/selectAvatar",
+    "pages/inputAgeAndGender/inputAgeAndGender",
     "pages/myPersonalHomepage/myPersonalHomepage",
     "pages/addTags/addTags",
     "pages/changeAvatar/changeAvatar",
@@ -7,15 +12,14 @@
     "pages/otherPersonalHomepage/otherPersonalHomepage",
     "pages/personalSign/personalSign",
     "pages/editNickname/editNickname",
-    "pages/index/index",
     "pages/chatTop/chatTop",
     "pages/chatPage/chatPage",
     "pages/logs/logs"
   ],
   "tabBar": {
-    "color":"",
-    "selectedColor":"",
-    "backgroundColor":"",
+    "color":"#111111",
+    "selectedColor":"#555555",
+    "backgroundColor":"#666666",
     "list": [
       {
         "pagePath": "pages/chatTop/chatTop",
