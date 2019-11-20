@@ -40,6 +40,11 @@
         <input name="age" maxlength="3" placeholder-class='placeholderClass' value="{{userInfo.age}}" bindinput="ageInput"></input>
     </view>
 
+    <view class="gender">
+        <text wx:if="{{gender}}==0">女</text>
+        <text wx:elif="{{gender}}==1">男</text>
+    </view>
+
     <view class="inputSign">
         <input name="sign" placeholder-class='placeholderClass' value="{{userInfo.personalSign}}" disabled="true" placeholder='添加你的个性签名' bindtap="personalSignInput"></input>
         <view class='arrow'></view>

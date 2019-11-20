@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/editMyInfo/editMyInfo",
     "pages/login/login",
     "pages/index/index",
     "pages/inputNameAndSchool/inputNameAndSchool",
@@ -8,7 +9,7 @@
     "pages/myPersonalHomepage/myPersonalHomepage",
     "pages/addTags/addTags",
     "pages/changeAvatar/changeAvatar",
-    "pages/editMyInfo/editMyInfo",
+    
     "pages/otherPersonalHomepage/otherPersonalHomepage",
     "pages/personalSign/personalSign",
     "pages/editNickname/editNickname",

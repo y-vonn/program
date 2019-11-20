@@ -2,8 +2,8 @@ const app = getApp();
 Page({
     data:{
         userInfo:{},    
-        count:[1,2,3,4,5,6,7],
-        infoList:["ID","所在学校","昵称","出生日期","星座","年龄","个性签名"],
+        count:[1,2,3,4,5,6,7,8],
+        infoList:["ID","所在学校","昵称","出生日期","星座","年龄","性别","个性签名"],
         imageList:["../image/t.png","../image/t.png","../image/t.png","../image/t.png","../image/t.png","../image/t.png"],
         allStars:['白羊座','金牛座','双子座','巨蟹座','狮子座','处女座','天秤座','天蝎座','射手座','摩羯座','水瓶座','双鱼座',]
     },

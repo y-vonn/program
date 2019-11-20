@@ -5,6 +5,9 @@ Page({
         year:"2001",
         month:"01",
         day:"01",
+        userId:"",
+        date:"",
+        gender:0,
         genderImage:[
             {
                 imageUrl:"../image/sss.jpg",
@@ -16,6 +19,11 @@ Page({
             }
         ]
     },
+    onLoad(){
+        this.setData({
+            userId:app.globalData.ourUserInfo.userId
+        })
+    },
     // 修改日期显示，并更新用户全局信息，并更新后台信息
     bindDateChange:function(e){
         var date = e.detail.value;
@@ -25,9 +33,11 @@ Page({
         this.setData({
             year:y,
             month:m,
-            day:d
+            day:d,
+            date:date
         });
         app.globalData.ourUserInfo.birthday=date;
+        
     },
     // 点击选择性别
     selectGender:function(e){
@@ -41,7 +51,8 @@ Page({
             } 
         }
         this.setData({
-            genderImage:gender
+            genderImage:gender,
+            gender: index
         })
         app.globalData.ourUserInfo.gender=index;
     },
@@ -51,5 +62,13 @@ Page({
         qq.navigateTo({
             url:"../inputNameAndSchool/inputNameAndSchool"
         })
+        qq.request({
+            url: app.globalData.url+"/updateGender?usrId="+this.userId+"&gender="+this.index,
+            method: "POST"
+        });
+        qq.request({
+            url: app.globalData.url+"/updateBirthday?usrId="+this.userId+"&birthday="+this.date,
+            method: "POST"
+        });
     }
 });

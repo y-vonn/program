@@ -12,6 +12,14 @@ Page({
         qq.navigateTo({
             url:"../selectAvatar/selectAvatar"
         })
+        qq.request({
+            url: app.globalData.url+"/updateSchool?usrId="+this.userId+"&school="+this.school,
+            method: "POST"
+        });
+        qq.request({
+            url: app.globalData.url+"/updateNickname?usrId="+this.userId+"&nickname="+this.nickname,
+            method: "POST"
+        });
     },
     nameInput:function(e){
         var name = e.detail.value;
