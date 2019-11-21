@@ -43,5 +43,9 @@ Page({
         qq.navigateTo({
             url:"../myPersonalHomepage/myPersonalHomepage"
         })
+        qq.request({
+            url: app.globalData.url+"/updateAvatarUrl?usrId="+this.userId+"&avatarUrl="+this.avatarUrl,
+            method: "POST"
+        });
     }
 });
