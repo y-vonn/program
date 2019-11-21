@@ -1,3 +1,4 @@
+const app = getApp();
 Page({
     data:{
         userInfo:{
@@ -14,11 +15,22 @@ Page({
             sourceType: ['album', 'camera'],
             success:function(res){
                 var avatar = res.tempFilePaths[0];
-                var user = that.data.userInfo;
-                user.avatarUrl = avatar;
-                that.setData({
-                    userInfo:user
-                });
+                qq.uploadFile({
+                    url:app.globalData.url+"/uploadImage",
+                    filePath: avatar,
+                    name: 'file',
+                    formData:{
+                        preName: avatar
+                    },
+                    success:function(res){
+                        console.log(res);
+                        var user = that.data.userInfo;
+                        user.avatarUrl = app.globalData.url+"/image/"+res.data;
+                        that.setData({
+                        userInfo:user
+                    });
+                    }
+                })
             },
             fail: function(res){
                 console.log(res)
