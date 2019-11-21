@@ -1,6 +1,6 @@
 <view>
     <view class="inputArea">
-        <textarea placeholder="有意思的签名会吸引更多人~" placeholder-class="placeholder" bindinput="inputSign"/>
+        <textarea placeholder="有意思的签名会吸引更多人~" value="{{userInfo.personalSign}}" placeholder-class="placeholder" bindinput="inputSign"/>
     </view>
 
     <button qq:if="{{num==0}}" class="success" bindtap="changeName">

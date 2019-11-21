@@ -1,7 +1,8 @@
 {
   "pages":[
-    "pages/editMyInfo/editMyInfo",
     "pages/login/login",
+    "pages/editMyInfo/editMyInfo",
+    
     "pages/index/index",
     "pages/inputNameAndSchool/inputNameAndSchool",
     "pages/selectAvatar/selectAvatar",
@@ -31,8 +32,8 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/logs/logs",
-        "text": "日志"
+        "pagePath": "pages/myPersonalHomepage/myPersonalHomepage",
+        "text": "我的"
       }
     ]
   },

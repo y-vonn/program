@@ -4,7 +4,14 @@ Page({
     data:{
         canJump:false,
         nickname:"",
-        school:""
+        school:"",
+        userId:""
+    },
+
+    onLoad(){
+        this.setData({
+            userId:app.globalData.ourUserInfo.userId
+        })
     },
 
     jump:function(){
@@ -13,11 +20,11 @@ Page({
             url:"../selectAvatar/selectAvatar"
         })
         qq.request({
-            url: app.globalData.url+"/updateSchool?usrId="+this.userId+"&school="+this.school,
+            url: app.globalData.url+"/updateSchool?userId="+this.data.userId+"&school="+this.data.school,
             method: "POST"
         });
         qq.request({
-            url: app.globalData.url+"/updateNickname?usrId="+this.userId+"&nickname="+this.nickname,
+            url: app.globalData.url+"/updateNickname?userId="+this.data.userId+"&nickname="+this.data.nickname,
             method: "POST"
         });
     },

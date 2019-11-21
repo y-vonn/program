@@ -23,13 +23,16 @@ Page({
                 console.log("fail");
             }
         })
-        console.log(this.data.userInfo);
     },
     login:function(){
-        console.log(this.data.userInfo);
+        console.log(app.globalData.ourUserInfo);
         if(this.data.userInfo.school==""){
             qq.redirectTo({
                 url:"../inputAgeAndGender/inputAgeAndGender"
+            })
+        }else{
+            qq.switchTab({
+                url:"../myPersonalHomepage/myPersonalHomepage"
             })
         }
     }

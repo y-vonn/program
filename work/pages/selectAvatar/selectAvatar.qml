@@ -6,7 +6,7 @@
             <text class="highlight">真实照片</text>
             <text class="tips">哦</text>
         </view>
-        <image class="avatar" src="{{userInfo.avatarUrl}}" bindtap="changeAvatar"/>
+        <image class="avatar" src="{{path}}{{userInfo.avatarUrl}}" bindtap="changeAvatar"/>
         <text class="t">点击添加头像</text>
         <view class="triangle"></view>
         <text class="jump" bindtap="jump">最后一步了</text>

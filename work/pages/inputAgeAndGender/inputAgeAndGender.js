@@ -63,11 +63,11 @@ Page({
             url:"../inputNameAndSchool/inputNameAndSchool"
         })
         qq.request({
-            url: app.globalData.url+"/updateGender?usrId="+this.userId+"&gender="+this.index,
+            url: app.globalData.url+"/updateGender?userId="+this.data.userId+"&gender="+this.data.gender,
             method: "POST"
         });
         qq.request({
-            url: app.globalData.url+"/updateBirthday?usrId="+this.userId+"&birthday="+this.date,
+            url: app.globalData.url+"/updateBirthday?userId="+this.data.userId+"&birthday="+this.data.date,
             method: "POST"
         });
     }

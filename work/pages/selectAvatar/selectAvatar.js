@@ -1,9 +1,17 @@
 const app = getApp();
 Page({
     data:{
+        path:"",
         userInfo:{
             avatarUrl: "../image/avatar.png"
         }
+    },
+
+    onLoad(){
+        this.setData({
+            userInfo:app.globalData.ourUserInfo,
+            path:app.globalData.url+"/image/"
+        })
     },
 
     changeAvatar:function(){
@@ -25,7 +33,7 @@ Page({
                     success:function(res){
                         console.log(res);
                         var user = that.data.userInfo;
-                        user.avatarUrl = app.globalData.url+"/image/"+res.data;
+                        user.avatarUrl = res.data;
                         that.setData({
                         userInfo:user
                     });
@@ -40,11 +48,11 @@ Page({
 
     // 继续填写信息，跳转
     jump:function(){
-        qq.navigateTo({
+        qq.switchTab({
             url:"../myPersonalHomepage/myPersonalHomepage"
         })
         qq.request({
-            url: app.globalData.url+"/updateAvatarUrl?usrId="+this.userId+"&avatarUrl="+this.avatarUrl,
+            url: app.globalData.url+"/updateAvatarUrl?userId="+this.data.userInfo.userId+"&avatarUrl="+this.data.userInfo.avatarUrl,
             method: "POST"
         });
     }

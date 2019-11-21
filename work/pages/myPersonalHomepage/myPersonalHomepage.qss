@@ -25,12 +25,50 @@
     display:flex;
     flex-wrap:wrap;
     flex-direction:row;
-    justify-content:center;
     align-items:center;
 }
 
-.info{
-    margin:6rpx 10rpx;
+.info1{
+    margin-left:60rpx;
+    background:#E9E9E9;
+    height:40rpx;
+    width: 100rpx;
+    color:#333333;
+    border: 1rpx solid #979797;
+    font-size:20rpx;
+    border-radius:10rpx;
+    line-height:40rpx;
+    text-align:center;
+}
+
+.info2{
+    margin-left:20rpx;
+    background:#E9E9E9;
+    height:40rpx;
+    width: 100rpx;
+    color:#333333;
+    border: 1rpx solid #979797;
+    font-size:20rpx;
+    border-radius:10rpx;
+    line-height:40rpx;
+    text-align:center;
+}
+
+.info3{
+    margin-left:20rpx;
+    background:#E9E9E9;
+    height:40rpx;
+    width: 240rpx;
+    color:#333333;
+    border: 1rpx solid #979797;
+    font-size:20rpx;
+    border-radius:10rpx;
+    line-height:40rpx;
+    text-align:center;
+}
+
+.info4{
+    margin-left:20rpx;
     background:#E9E9E9;
     height:40rpx;
     color:#333333;
@@ -38,6 +76,7 @@
     font-size:20rpx;
     border-radius:10rpx;
     line-height:40rpx;
+    text-align:center;
 }
 
 .userInfo-personalSign{
@@ -116,6 +155,8 @@
     margin-top:9rpx;
     margin-right:9rpx;
 }
+
+
 
 .infoConfirm{
     position:absolute;

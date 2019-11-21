@@ -1,6 +1,13 @@
+const app = getApp();
 Page({
     data:{
-        num:0
+        userInfo:{},
+        sign:""
+    },
+    onLoad(){
+        this.setData({
+            userInfo: app.globalData.ourUserInfo
+        })
     },
     inputSign:function(e){
         var input = e.detail.value;
@@ -11,8 +18,23 @@ Page({
             })
         }else{
             this.setData({
-                num:len
+                num:len,
+                sign:input
             })
         }
+    },
+    changeName:function(){
+        var user = this.data.userInfo;
+        user.personalSign = this.data.sign;
+        this.setData({
+            userInfo:user
+        })
+        app.globalData.ourUserInfo = user;
+        qq.navigateBack();
+    },
+    onUnload(){
+        var pages = getCurrentPages();
+        var prevPage = pages[pages.length - 2];
+        prevPage.changeInfomation();
     }
 });

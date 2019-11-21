@@ -1,6 +1,6 @@
 <view>
     <view class="input">
-        <input bindinput="textNumber" maxlength="15" placeholder="请设置你的昵称" placeholder-class="placeholder"></input>
+        <input bindinput="textNumber" maxlength="15" value="{{userInfo.nickname}}" placeholder="请设置你的昵称" placeholder-class="placeholder"></input>
     </view>
     <view>
         <text class="tips">{{tips}}</text>

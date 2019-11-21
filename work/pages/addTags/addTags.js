@@ -1,3 +1,4 @@
+const app = getApp();
 Page({
     data:{
         sysTags:[
@@ -44,26 +45,11 @@ Page({
             {
                 tag: "帅10",
                 isSelect: false
-            },
-            {
-                tag: "帅11",
-                isSelect: true
-            },
-            {
-                tag: "帅12",
-                isSelect: false
-            },
-            {
-                tag: "帅13",
-                isSelect: false
-            },
-            {
-                tag: "帅14",
-                isSelect: false
             }
         ],
         showInput: false,
         tag:"",
+        userInfo:{},
         indexMap:{
             "帅气" : 0,
             "帅气1": 1,
@@ -75,28 +61,22 @@ Page({
             "帅气7": 7,
             "帅气8": 8,
             "帅气9": 9,
-            "帅气10": 10,
-            "帅气11": 11,
-            "帅气12": 12,
-            "帅气13": 13,
-            "帅气14": 14
+            "帅气10": 10
         },
+    },
+    onLoad(){
+        this.setData({
+            userInfo:app.globalData.ourUserInfo
+        }),
+        this.init();
     },
 
     //后台传回来的tags，遍历，若在indexmap中，则置true，否则添加新的进去，置true，若用户添加新标签，
     //更新tags数组，sys添加新的，置true， isSelect用来显示不同class
     init:function(){
-        var userTags=["帅气"]; //获取Globaltags数组或者是字符串
+        var userTags= this.data.userInfo.tag.split(","); //获取Globaltags数组或者是字符串
         var indexMap = this.data.indexMap;
         var sysTags = this.data.sysTags;
-        for(var t in userTags){
-            if(indexMap.hasOwnProperty(userTags[t])){
-                var index = indexMap[userTags[t]];
-                sysTags[index].isSelect = true;
-            }else{
-                sysTags.push({tag:t,isSelect: true});
-            }
-        }
         this.setData({
             sysTags:sysTags
         });
@@ -134,7 +114,17 @@ Page({
             tag:e.detail.value
         })
     },
-    onLoad:function(){
-        this.init();
+    onUnload(){
+        var t =[];
+        var tags = this.data.sysTags;
+        for(var i=0;i<tags.length;i++){
+            if(tags[i].isSelect){
+                t.push(tags[i].tag);
+            }
+        }
+        app.globalData.ourUserInfo.tag = t.join(",");
+        var pages = getCurrentPages();
+        var beforePage = pages[pages.length - 2];
+        beforePage.updateInfo();
     }
 });
