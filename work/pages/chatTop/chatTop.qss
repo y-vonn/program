@@ -12,6 +12,8 @@
     width: 100%;
 }
 .chat-view .user-head{
+    width:90rpx;
+    height: 90rpx;
     margin: 8rpx 20rpx 8rpx 30rpx;
 }
 .chat-view .info{
@@ -34,6 +36,7 @@
     display: -webkit-flex;
     display: flex;
     flex-flow: column nowrap;
+    justify-content: flex-end;
     align-items: center;
     margin-right:15rpx;
 }

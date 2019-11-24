@@ -3,6 +3,7 @@
         <scroll-view 
         class="chat-scroll"
         scroll-y
+        scroll-top="{{scrollTop}}"
         >
             <view
             qq:for="{{infos}}"
@@ -10,7 +11,7 @@
             class="chat-view">
                 <view qq:if="{{!info.isOwner}}" class="chat-content">
                     <view class="user-info">
-                        <icon qq:if="{{!info.isOwner}}" class="head-img" type="success" size="60rpx" />
+                        <image qq:if="{{!info.isOwner}}" class="head-img" src="../image/user.png" />
                     </view>
                     <view class="chat-text">{{info.content}}</view>
                 </view>
@@ -19,9 +20,11 @@
                 </view>
             </view>
         </scroll-view>
-        <view class="chat-input">
-            <input class="chat-input-text" placeholder="请输入字符"/>
-            <view class="chat-confirm"/>
-        </view>
+        <form bindsubmit="formSubmit">
+            <view class="chat-input">
+                <input type="text" class="chat-input-text" name="text" placeholder="请输入字符"/>
+                <button form-type="submit" class="chat-confirm"/>
+            </view>
+        </form>
     </view>
 </view>
