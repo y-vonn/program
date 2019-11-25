@@ -11,7 +11,6 @@ Page({
     //通过获取的唯一id向后台提取用户信息，或者其他页面提取保存后，将信息保存为global取用
     onLoad(){
         this.init();
-        console.log(app.globalData);
     },
     // 页面加载同步信息
     init:function(){

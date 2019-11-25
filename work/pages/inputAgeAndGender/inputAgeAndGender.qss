@@ -11,19 +11,27 @@
     flex-direction:row;
 }
 
-.noSelect{
-    width:180rpx;
-    height:180rpx;
-    border-radius:90rpx;
-    margin-right:70rpx;
+.gender{
+    position:absolute;
+    top:296rpx;
+    left:125rpx;
+    width:50rpx;
+    height:50rpx;
 }
 
-.selected{
+.gender1{
+    position:absolute;
+    top:296rpx;
+    left:375rpx;
+    width:50rpx;
+    height:50rpx;
+}
+
+
+.back{
     width:180rpx;
     height:180rpx;
-    border-radius:90rpx;
     margin-right:70rpx;
-    border: 3px solid #6385F4;
 }
 
 .title{

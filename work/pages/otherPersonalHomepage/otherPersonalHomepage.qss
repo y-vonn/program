@@ -33,44 +33,44 @@
     border-radius: 90rpx;
 }
 
-
+.info{
+    display:flex;
+    flex-direction:column;
+}
 .personalInfo{
-    position: absolute;
-    left: 80rpx;
-    top: 279rpx;
+    margin-top: 250rpx;
+    margin-left: 80rpx;
     color: #666666;
     font-size: 26rpx;
     font-family: PingFangSC-Regular,PingFang SC;
 }
 
 .personalSign{
-    position: absolute;
-    left: 80rpx;
-    top: 336rpx;
+    margin-top: 20rpx;
+    margin-left: 80rpx;
+    width: 590rpx;
+    word-break: keep-all;
+    word-wrap: break-word;
     color: #666666;
     font-size: 26rpx;
     font-family: PingFangSC-Regular,PingFang SC;
 }
 
 .personalTag{
-    position: absolute;
-    left: 80rpx;
-    top: 387rpx;
+    margin-top: 20rpx;
+    margin-left: 80rpx;
     color: #666666;
     font-size: 26rpx;
     font-family: PingFangSC-Regular,PingFang SC;
 }
 
 .myTag{
-    position: absolute;
-    top: 436rpx;
-    left: 20rpx;
-    width:710rpx;
+    margin-left:80rpx;
+    margin-top:10rpx;
+    width:590rpx;
     display:flex;
     flex-direction:row;
     flex-wrap:wrap;
-    justify-content:center;
-    align-items:center;
 }
 
 .tag{
@@ -81,7 +81,7 @@
 .tagButton{
     width:150rpx;
     height: 50rpx;
-    margin: 10rpx 10rpx;
+    margin-right: 10rpx;
     border:1rpx solid #979797;
     border-radius:25rpx;
     color:#ECA733;
@@ -92,12 +92,19 @@
     color:#333333;
     font-size:26rpx;
     margin-top:20rpx;
-    margin-bottom:10rpx;
-    width:590rpx;
+    margin-left:80rpx;
     font-family:PingFangSC-Regular,PingFang SC;
 }
 
 .photoWall{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    margin-left:30rpx;
+    margin-top:10rpx;
+}
+
+.photo{
     width:224rpx;
     height:340rpx;
     margin: 0rpx 4.5rpx;

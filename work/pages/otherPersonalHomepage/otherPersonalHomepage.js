@@ -1,15 +1,55 @@
+const app = getApp();
+
 Page({
     data:{
-        userInfo:{
-            avatarUrl:"../image/avatar.png",
-            nickname: "grape",
-            personalInfo:"23岁/北京航空航天大学/白羊座",
-            personalSign:"---",
-            personalTag:"eee",
-            photos:["../image/t.png","../image/t.png","../image/t.png","../image/t.png","../image/t.png","../image/t.png"],
-        }
+        userInfo:{},
+        path:"",
+        gender:"",
+        tags:[],
+        photos:[]
     },
-    test:function(event){
-        console.log(event)
+    // 传入他人id，后台数据更新本页面
+    onLoad(){
+        var that = this;
+        qq.request({
+            url:"https://app.imoe.net.cn/user/getUser?userId=09FF059C17C911CA0AC33767391A234A",
+            method:"GET",
+            success(res){
+                that.setData({
+                    userInfo:res.data
+                })
+                //获取到信息后再修改本页信息
+                that.change();
+            }
+        });
+    },
+
+    change:function(){
+        var gender="";
+        if(this.data.userInfo.gender==0){
+            gender="女";
+        }else{
+            gender="男";
+        }
+        var tag = this.data.userInfo.tag.split(",");
+        var tags =[];
+        for(var i=0; i<tag.length;i++){
+            if(tag[i]!=""){
+                tags.push(tag[i]);
+            }
+        };
+        var photos = this.data.userInfo.photos.split(",");
+        this.setData({
+            path: app.globalData.url+"/image/",
+            gender: gender,
+            tags:tags,
+            photos:photos
+        })
+    },
+    // 跳转
+    chatToHim:function(){
+        qq.redirectTo({
+
+        })
     }
 });

@@ -1,12 +1,12 @@
 {
 	"projectid": "1109993068_work",
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
-		"postcss": true,
+		"postcss": false,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false,
+		"autoAudits": true,
 		"remoteDebugLogEnable": false,
 		"uploadWithSourceMap": true,
 		"nodeModules": true,

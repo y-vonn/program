@@ -4,7 +4,10 @@
         <text class="tips">登录完成后，您的性别将无法修改</text>
         <view class="genderSelect">
             <view qq:for="{{genderImage}}" qq:for-item="i" qq:for-index="index">
-                <image class="{{i.isSelected?'selected':'noSelect'}}" bindtap="selectGender" data-index="{{index}}" src="{{i.imageUrl}}"/>
+                <image qq:if="{{i.isSelected}}" class="back" bindtap="selectGender" data-index="{{index}}" src="{{i.back_select}}"/>
+                <image qq:elif="!{{i.isSelected}}" class="back" bindtap="selectGender" data-index="{{index}}" src="{{i.back_normal}}"/>
+                <image qq:if="{{i.isSelected}}" class="{{index==0?'gender':'gender1'}}" bindtap="selectGender" data-index="{{index}}" src="{{i.select}}"/>
+                <image qq:elif="!{{i.isSelected}}" class="{{index==0?'gender':'gender1'}}" bindtap="selectGender" data-index="{{index}}" src="{{i.normal}}"/>
             </view>
         </view>
         <view class="genderName">

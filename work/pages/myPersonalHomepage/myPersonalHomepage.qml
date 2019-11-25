@@ -9,11 +9,15 @@
     <view>
         <text class="userInfo-personalSign">{{userInfo.personalSign}}</text>
     </view>
+
     <view class="basicInfo">
+        <image qq:if="{{userInfo.gender}}==0" class="gender" src="../image/girl.png"/>
+        <image qq:elif="{{userInfo.gender}}==1" class="gender" src="../image/boy.png"/>
         <text class="info1">{{userInfo.age}}岁</text>
         <text class="info2">{{userInfo.star}}</text>
         <text class="info3">{{userInfo.school}}</text>
-        <button class="info4" bindtap="editInfo">编辑资料</button>
+        <image class="edit" src="../image/edit.png"/>
+        <text class="info4" bindtap="editInfo">编辑资料</text>
     </view>
     <text class="myTags">我的标签</text>
     <view class="myTag">
@@ -31,7 +35,10 @@
             <text class="myPhotoWall">我的照片墙</text>
 
         <view qq:for="{{photos}}" qq:key="p" qq:for-item="i" qq:for-index="index">
-            <image  class="photoWall" src="{{path}}{{i}}" data-i="{{index}}" bindtap="imageSelect"></image>
+            <image qq:if="{{i!==('t.png')}}" class="photoWall" src="{{path}}{{i}}" data-i="{{index}}" bindtap="imageSelect"></image>
+            <view qq:else class="noPhoto" data-i="{{index}}" bindtap="imageSelect">
+            添加图片
+            </view>
         </view>
     </view>
     

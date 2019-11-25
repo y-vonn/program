@@ -1,17 +1,18 @@
 {
   "pages":[
     "pages/login/login",
-    "pages/editMyInfo/editMyInfo",
+    "pages/myPersonalHomepage/myPersonalHomepage",
+    "pages/inputNameAndSchool/inputNameAndSchool",
+    "pages/addTags/addTags",
+    "pages/otherPersonalHomepage/otherPersonalHomepage",
     
     "pages/index/index",
-    "pages/inputNameAndSchool/inputNameAndSchool",
+    
+    "pages/editMyInfo/editMyInfo",
+    
     "pages/selectAvatar/selectAvatar",
     "pages/inputAgeAndGender/inputAgeAndGender",
-    "pages/myPersonalHomepage/myPersonalHomepage",
-    "pages/addTags/addTags",
     "pages/changeAvatar/changeAvatar",
-    
-    "pages/otherPersonalHomepage/otherPersonalHomepage",
     "pages/personalSign/personalSign",
     "pages/editNickname/editNickname",
     "pages/chatTop/chatTop",

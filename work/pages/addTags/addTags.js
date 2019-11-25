@@ -51,17 +51,17 @@ Page({
         tag:"",
         userInfo:{},
         indexMap:{
-            "帅气" : 0,
-            "帅气1": 1,
-            "帅气2": 2,
-            "帅气3": 3,
-            "帅气4": 4,
-            "帅气5": 5,
-            "帅气6": 6,
-            "帅气7": 7,
-            "帅气8": 8,
-            "帅气9": 9,
-            "帅气10": 10
+            "帅" : 0,
+            "帅1": 1,
+            "帅2": 2,
+            "帅3": 3,
+            "帅4": 4,
+            "帅5": 5,
+            "帅6": 6,
+            "帅7": 7,
+            "帅8": 8,
+            "帅9": 9,
+            "帅10": 10
         },
     },
     onLoad(){
@@ -77,6 +77,14 @@ Page({
         var userTags= this.data.userInfo.tag.split(","); //获取Globaltags数组或者是字符串
         var indexMap = this.data.indexMap;
         var sysTags = this.data.sysTags;
+        for(var i=0; i<userTags.length;i++){
+            if(indexMap.hasOwnProperty(userTags[i])){
+                var index = indexMap[userTags[i]];
+                sysTags[index].isSelect = true;
+            }else if(userTags[i]!=""){
+                sysTags.push({tag:userTags[i], isSelect:true});
+            }
+        }
         this.setData({
             sysTags:sysTags
         });
@@ -125,6 +133,6 @@ Page({
         app.globalData.ourUserInfo.tag = t.join(",");
         var pages = getCurrentPages();
         var beforePage = pages[pages.length - 2];
-        beforePage.updateInfo();
+        beforePage.updateTag();
     }
 });

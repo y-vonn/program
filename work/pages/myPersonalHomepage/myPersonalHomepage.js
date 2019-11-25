@@ -78,7 +78,16 @@ Page({
     },
     addImage:function(name, index){
         var p = this.data.photos;
-        p[index]=name;
+        if(p[index]==="t.png"){
+            for(var i=0;i<6;i++){
+                if(p[i]==="t.png"){
+                    p[i]=name;
+                    break;
+                }
+            }
+        }else{
+            p[index]=name;
+        }
         var photo = p.join(",");
         var usr = this.data.userInfo;
         usr.photos = photo;
@@ -87,7 +96,6 @@ Page({
             url: app.globalData.url+"/updatePhotosById?userId="+this.data.userInfo.userId+"&photos="+photo,
             method: "POST"
         });
-        console.log(photo);
         this.setData({
             photos: p,
             userInfo: usr
@@ -96,6 +104,16 @@ Page({
 
     // 由修改信息页返回时，将全局信息更新到本页，并更新到后台
     updateInfo:function(){
+        this.setData({
+            userInfo:app.globalData.ourUserInfo
+        })
+        qq.request({
+            url:app.globalData.url+"/updateBasicInfo",
+            data: app.globalData.ourUserInfo,
+            method:"POST"
+        })
+    },
+    updateTag:function(){
         var tag = app.globalData.ourUserInfo.tag.split(",");
         var tags =[];
         for(var i=0; i<tag.length;i++){
@@ -103,17 +121,20 @@ Page({
                 tags.push(tag[i]);
             }
         };
+        this.setData({
+            tags:tags
+        })
         qq.request({
             url: app.globalData.url+"/updateTagById?userId="+app.globalData.ourUserInfo.userId+"&tag="+tags.join(","),
             method:"POST"
         })
+    },
+    updateAvatar:function(){
         this.setData({
-            userInfo:app.globalData.ourUserInfo,
-            tags:tags
+            userInfo:app.globalData.ourUserInfo
         })
         qq.request({
-            url:app.globalData.url+"/updateBasicInfo",
-            data: app.globalData.ourUserInfo,
+            url: app.globalData.url+"/updateAvatarUrl?userId="+app.globalData.ourUserInfo.userId+"&avatarUrl="+this.data.userInfo.avatarUrl,
             method:"POST"
         })
     }

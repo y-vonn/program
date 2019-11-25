@@ -50,6 +50,15 @@
     border-radius: 60rpx;
 }
 
+.login2{
+    width:350rpx;
+    height:90rpx;
+    margin-top:20rpx;
+    background:#999999;
+    border: 1rpx solid #666666;
+    border-radius: 60rpx;
+}
+
 .login text{
     color:#FFFFFF;
     font-size:34rpx;

@@ -28,9 +28,27 @@
     align-items:center;
 }
 
+.gender{
+    position:absolute;
+    top:13rpx;
+    left:75rpx;
+    width:18rpx;
+    height:18rpx;
+}
+
+.edit{
+    position:absolute;
+    top:13rpx;
+    left:580rpx;
+    width:18rpx;
+    height:18rpx;
+}
+
 .info1{
+    box-sizing: border-box;
     margin-left:60rpx;
     background:#E9E9E9;
+    padding-left:35rpx;
     height:40rpx;
     width: 100rpx;
     color:#333333;
@@ -68,9 +86,12 @@
 }
 
 .info4{
+    box-sizing: border-box;
     margin-left:20rpx;
     background:#E9E9E9;
+    padding-left:30rpx;
     height:40rpx;
+    width:130rpx;
     color:#333333;
     border: 1rpx solid #979797;
     font-size:20rpx;
@@ -109,7 +130,7 @@
     color:#ECA733;
     border-radius:35rpx;
     border:1rpx solid #ECA733;
-    line-height:50rpx;
+    line-height:45rpx;
 }
 
 .myTag{
@@ -149,6 +170,22 @@
     font-family:PingFangSC-Regular,PingFang SC;
 }
 
+.noPhoto{
+    display:flex;
+    flex-direction:row;
+    width:223rpx;
+    height:339rpx;
+    margin-top:9rpx;
+    margin-right:9rpx;
+    background:#D8D8D8;
+    border: 1rpx solid #979797;
+    color:#9B9B9B;
+    font-size:28rpx;
+    font-family:PingFangSC-Regular,PingFang SC;
+    align-items:center;
+    justify-content:center;
+}
+
 .photoWall{
     width:224rpx;
     height:340rpx;
@@ -168,7 +205,7 @@
     border-bottom-left-radius: 27px;
     border-top-left-radius: 27px;
     border: 1rpx solid #979797;
-    line-height:54rpx;
+    line-height:50rpx;
 }
 
 .infoConfirm text{

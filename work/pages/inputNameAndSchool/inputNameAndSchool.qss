@@ -41,6 +41,8 @@
     margin-top:20rpx;
     border: 1rpx solid #9B9B9B;
     border-radius:45rpx;
+    font-size:32rpx;
+    font-family:PingFangSC-Regular,PingFang SC;
 }
 
 .placeholder{

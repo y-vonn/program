@@ -8,16 +8,23 @@ Page({
         userId:"",
         date:"",
         gender:0,
+        age:0,
         genderImage:[
             {
-                imageUrl:"../image/sss.jpg",
+                normal:"../image/girl.png",
+                select:"../image/girl_select.png",
+                back_normal:"../image/gender.png",
+                back_select:"../image/gender_select.png",
                 isSelected:true
             },
             {
-                imageUrl:"../image/avatar.png",
+                normal:"../image/boy.png",
+                select:"../image/boy_select.png",
+                back_normal:"../image/gender.png",
+                back_select:"../image/gender_select.png",
                 isSelected:false
             }
-        ]
+        ],
     },
     onLoad(){
         this.setData({
@@ -30,14 +37,17 @@ Page({
         var y = date.slice(0,4);
         var m = date.slice(5,7);
         var d = date.slice(8,10);
+        var curY = new Date().getFullYear();
+        var age = curY - parseInt(y);
         this.setData({
             year:y,
             month:m,
             day:d,
-            date:date
+            date:date,
+            age:age
         });
         app.globalData.ourUserInfo.birthday=date;
-        
+        app.globalData.ourUserInfo.age=age;
     },
     // 点击选择性别
     selectGender:function(e){
@@ -68,6 +78,10 @@ Page({
         });
         qq.request({
             url: app.globalData.url+"/updateBirthday?userId="+this.data.userId+"&birthday="+this.data.date,
+            method: "POST"
+        });
+        qq.request({
+            url: app.globalData.url+"/updateAge?userId="+this.data.userId+"&age="+this.data.age,
             method: "POST"
         });
     }
