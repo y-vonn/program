@@ -21,6 +21,7 @@
         <view class="photoWall">
              <view qq:for="{{photos}}" qq:key="*this" qq:for-item="i">
             <image qq:if="{{i!==('t.png')}}" class="photo" src="{{path}}{{i}}" data-i="{{index}}" bindtap="imageSelect"></image>
+            <view qq:else class="noPhoto"></view>
         </view>
         </view>
     </view>

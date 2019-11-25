@@ -11,7 +11,7 @@
     height: 60rpx;
     background:#6385F4;
     border: 2rpx solid #5A7AE2;
-    line-height: 60rpx;
+    line-height:45rpx;
     border-radius: 30rpx;
 }
 

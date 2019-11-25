@@ -37,7 +37,7 @@ App({
     code:null,
     userInfo: null,
     ourUserInfo: null,
-    url:"https://app.imoe.net.cn/user"
+    url:"https://app.imoe.net.cn/user",
     testInfo: 10001
   }
 })
