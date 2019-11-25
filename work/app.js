@@ -37,6 +37,11 @@ App({
     code:null,
     userInfo: null,
     ourUserInfo: null,
+<<<<<<< HEAD
     url:"https://app.imoe.net.cn/user"
+=======
+    url:"http://127.0.0.1:8080",
+    testInfo: 10001
+>>>>>>> 3dd56c6517b2450abbb34c8b4b0e0bea048e8be8
   }
 })

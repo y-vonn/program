@@ -32,12 +32,12 @@
     margin: 0 10rpx 0 0;
 }
 .chat-content .chat-text{
-    background:rgba(216,216,216,1);
+    background:rgba(255,255,255,1);
     border-bottom-left-radius:38px;
     border-bottom-right-radius:38px;
     border-top-left-radius:0px;
     border-top-right-radius:38px;
-    border:1px solid rgba(151,151,151,1);
+    border:1px solid rgba(204,204,204,1);
 } 
 .chat-view .user-chat-content{
     display: -webkit-flex;
@@ -48,7 +48,7 @@
     margin: 20rpx 30rpx 0 30rpx;
 }
 .user-chat-content .chat-text{
-    background:rgba(236,167,51,1);
+    background:rgba(99,133,244,1);
     border-bottom-left-radius:38px;
     border-bottom-right-radius:38px;
     border-top-left-radius:38px;
@@ -74,6 +74,7 @@
     width:40rpx;
     height:40rpx;
     margin: 0 10rpx;
+    padding: 0;
     background:rgba(236,167,51,1);
     border-radius: 50%;
 }
