@@ -9,10 +9,11 @@ Page({
         photos:[]
     },
     // 传入他人id，后台数据更新本页面
-    onLoad(){
+    onLoad(option){
         var that = this;
+        var userId = option.id;
         qq.request({
-            url:"https://app.imoe.net.cn/user/getUser?userId=09FF059C17C911CA0AC33767391A234A",
+            url:"https://app.imoe.net.cn/user/getUser?userId="+userId,
             method:"GET",
             success(res){
                 that.setData({
@@ -48,8 +49,9 @@ Page({
     },
     // 跳转
     chatToHim:function(){
-        qq.redirectTo({
-
+        var that = this;
+        qq.navigateTo({
+            url:'../chatPage/chatPage?id=' + that.data.userInfo.userId + "&name=" + that.data.userInfo.nickname
         })
     }
 });
