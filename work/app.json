@@ -17,7 +17,9 @@
     "pages/editNickname/editNickname",
     "pages/chatTop/chatTop",
     "pages/chatPage/chatPage",
-    "pages/logs/logs"
+    "pages/logs/logs",
+
+    "pages/maininterface/maininterface"
   ],
   "tabBar": {
     "color":"#7F8389",
@@ -25,7 +27,7 @@
     "backgroundColor":"#FFFFFF",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/maininterface/maininterface",
         "iconPath":"pages/image/home.png",
         "selectedIconPath": "pages/image/home_select.png",
         "text": "发现"

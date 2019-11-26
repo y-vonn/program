@@ -1,6 +1,7 @@
 //chatTop.js
 //获取应用实例
 const app = getApp()
+const util = require('../../utils/util.js')
 
 function switch2Page() {
     document.getElementById
@@ -14,21 +15,26 @@ Page({
 
       var getChatUserHandle = function(res) {
           this.setData({
-              infos: res.data.users.map(id => {
-                  return {head: "test/test.png", name: id, id: id}
+              infos: res.data.users.map(dat => {
+                  return {head: app.globalData.url+"/image/"+dat.headUrl, name: dat.name, id: dat.id, time: util.formatTime(new Date(dat.time)).split(" ")[1]}
               })
           })
-          console.log(this.data.infos)
+        //   console.log(this.data.infos)
       }.bind(this)
       
       qq.request({
-          url: "https://app.imoe.net.cn/workTest/user/getChatUser?id=" +  app.globalData.testInfo,
+          url: "https://app.imoe.net.cn/workTest/user/getChatUser?id=" +  app.globalData.ourUserInfo.userId,
           success(res){getChatUserHandle(res)}
       })
   },
-  bindViewTap(e) {
+  BindViewTap(e) {
     qq.navigateTo({
       url: '../chatPage/chatPage?name=' + e.currentTarget.dataset.id
     })
   },
+  BindWatchTap(e) {
+      qq.navigateTo({
+      url: '../otherPersonalHomepage/otherPersonalHomepage?id=' + e.currentTarget.dataset.id
+    })
+  }
 })

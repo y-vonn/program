@@ -15,6 +15,7 @@
     width:90rpx;
     height: 90rpx;
     margin: 8rpx 20rpx 8rpx 30rpx;
+    border-radius: 45rpx;
 }
 .chat-view .info{
     display: -webkit-flex;
