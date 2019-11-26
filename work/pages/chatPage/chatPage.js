@@ -4,15 +4,23 @@ const app = getApp()
 
 Page({
     data: {
-      user: "",
+      name: "11", 
+      user: "12",
       toUser: "",
       infos: [],
       scrollTop: 999
   },
   onLoad: function(option) {
+      var that = this
+      
       this.setData({
+          name: option.name,
           user: app.globalData.ourUserInfo.userId,
-          toUser: option.name
+          toUser: option.id
+      })
+
+      qq.setNavigationBarTitle({
+          title: that.data.name 
       })
 
       var getUserChatData = function(res) {
@@ -25,7 +33,7 @@ Page({
       }.bind(this)
 
       qq.request({
-          url: "https://app.imoe.net.cn/workTest/user/getChatUserData?userId=" + app.globalData.ourUserInfo.userId + "&targetId=" + option.name,
+          url: "https://app.imoe.net.cn/workTest/user/getChatUserData?userId=" + app.globalData.ourUserInfo.userId + "&targetId=" + option.id,
           success(res){getUserChatData(res)}
       })
 

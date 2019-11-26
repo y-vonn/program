@@ -29,7 +29,7 @@ Page({
   },
   BindViewTap(e) {
     qq.navigateTo({
-      url: '../chatPage/chatPage?name=' + e.currentTarget.dataset.id
+      url: '../chatPage/chatPage?id=' + e.currentTarget.dataset.id + "&name=" + e.currentTarget.dataset.name
     })
   },
   BindWatchTap(e) {
