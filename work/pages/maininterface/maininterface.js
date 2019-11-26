@@ -4,6 +4,7 @@ const app = getApp()
 
 Page({
   data: {
+      imgHead: app.globalData.url+"/image/",
       blocks: [{
         userId: 123123,
         headUrl: "",
@@ -31,12 +32,12 @@ Page({
           blocks: res.data.map(info => {
             var photo = "" 
             if(info.photos){
-              photo =  app.globalData.url+"/image/" + info.photos.split(",")[0]
+              photo =  info.photos.split(",")[0]
             }
             else{
-              photo = app.globalData.url+"/image/" + ""
+              photo = ""
             }
-            return {userId: info.userId, headUrl: app.globalData.url+"/image/"+info.avatarUrl, picUrl: photo, name: info.nickname, pst:1}
+            return {userId: info.userId, headUrl: info.avatarUrl, picUrl: photo, name: info.nickname, pst:1}
           })
         })
       }
@@ -50,7 +51,7 @@ Page({
   Bindtapch: function (e) {
     console.log(e)
     qq.navigateTo({
-      url: '../chatPage/chatPage?id=' + e.currentTarget.dataset.id + "&name=" + e.currentTarget.dataset.name
+      url: '../chatPage/chatPage?id=' + e.currentTarget.dataset.id + "&name=" + e.currentTarget.dataset.name + "&head=" + e.currentTarget.dataset.head
     })
   },
   BindTaphe: function (e) {

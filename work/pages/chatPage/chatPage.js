@@ -7,16 +7,19 @@ Page({
       name: "11", 
       user: "12",
       toUser: "",
+      toUserHead: "",
       infos: [],
       scrollTop: 999
   },
   onLoad: function(option) {
+      console.log(option)
       var that = this
       
       this.setData({
           name: option.name,
           user: app.globalData.ourUserInfo.userId,
-          toUser: option.id
+          toUser: option.id,
+          toUserHead: app.globalData.url+"/image/"+option.head
       })
 
       qq.setNavigationBarTitle({
