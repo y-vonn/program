@@ -20,7 +20,7 @@ Page({
       method: "POST",
       dataType: "json",
       data: {
-        gender:0,
+        gender:1,
         school:"北京邮电大学",
         low:0,
         high:100
