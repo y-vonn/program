@@ -11,7 +11,7 @@
                     <view class="time">{{block.pst+"分钟以前推荐"}}</view>
                  </view>
                 <view class="info-r">
-                    <view data-id="{{block.userId}}" bindtap="Bindtapch" class="chat">私聊</view>
+                    <view data-id="{{block.userId}}" data-name="{{block.name}}" bindtap="Bindtapch" class="chat">私聊</view>
                 </view>
             </view>
             <image src="{{block.picUrl}}" class="belowimg" mode="aspectFill"/>

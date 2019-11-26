@@ -50,7 +50,7 @@ Page({
   Bindtapch: function (e) {
     console.log(e)
     qq.navigateTo({
-      url: '../chatPage/chatPage?name=' + e.currentTarget.dataset.id
+      url: '../chatPage/chatPage?id=' + e.currentTarget.dataset.id + "&name=" + e.currentTarget.dataset.name
     })
   },
   BindTaphe: function (e) {
