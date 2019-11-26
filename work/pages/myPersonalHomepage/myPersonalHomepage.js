@@ -52,7 +52,7 @@ Page({
     imageSelect:function(e){
          var that = this;
          var i = e.currentTarget.dataset.i;
-        // 未知问题：只能拍照不能从本地相册获取
+        // 未知问题：ios只能拍照不能从本地相册获取
         qq.chooseImage({
             count:1,
             sizeType:['original','compressed'],

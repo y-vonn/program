@@ -1,6 +1,9 @@
-<view>
+<view class="con">
     <image bindtap="changeAvatar" class="userInfo-avatar" src="{{path}}{{userInfo.avatarUrl}}"></image>
-    <button bindtap="infoConfirm" class="infoConfirm">
+    <button qq:if="{{userInfo.isConfirm==0}}" bindtap="infoConfirm" class="infoConfirm">
+        <text>实名认证</text>
+    </button>
+    <button qq:else class="infoConfirm1">
         <text>实名认证</text>
     </button>
     <view>

@@ -20,20 +20,26 @@
     "pages/logs/logs"
   ],
   "tabBar": {
-    "color":"#111111",
-    "selectedColor":"#555555",
-    "backgroundColor":"#666666",
+    "color":"#7F8389",
+    "selectedColor":"#6385F4",
+    "backgroundColor":"#FFFFFF",
     "list": [
       {
+        "pagePath": "pages/index/index",
+        "iconPath":"pages/image/home.png",
+        "selectedIconPath": "pages/image/home_select.png",
+        "text": "发现"
+      },
+      {
         "pagePath": "pages/chatTop/chatTop",
+        "iconPath":"pages/image/chat.png",
+        "selectedIconPath": "pages/image/chat_select.png",
         "text": "聊天"
       },
       {
-        "pagePath": "pages/index/index",
-        "text": "首页"
-      },
-      {
         "pagePath": "pages/myPersonalHomepage/myPersonalHomepage",
+        "iconPath":"pages/image/my.png",
+        "selectedIconPath": "pages/image/my_select.png",
         "text": "我的"
       }
     ]

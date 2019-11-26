@@ -1,3 +1,8 @@
+.con{
+    width:750rpx;
+    overflow-x:hidden;
+}
+
 .userInfo-avatar{
     position: absolute;
     top: 30rpx;
@@ -117,6 +122,7 @@
 .myTags{
     position: absolute;
     top: 405rpx;
+    width:600rpx;
     left: 80rpx;
     font-size:26rpx;
     color:#333333;
@@ -206,6 +212,25 @@
     border-top-left-radius: 27px;
     border: 1rpx solid #979797;
     line-height:50rpx;
+}
+
+.infoConfirm1{
+    position:absolute;
+    top: 93rpx;
+    left: 590rpx;
+    width: 180rpx;
+    height: 54rpx;
+    background:#6385F4;
+    border-bottom-left-radius: 27px;
+    border-top-left-radius: 27px;
+    border: 1rpx solid #979797;
+    line-height:50rpx;
+}
+
+.infoConfirm1 text{
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-size: 28rpx;
+    color: #FFFFFF;
 }
 
 .infoConfirm text{
