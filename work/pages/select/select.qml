@@ -10,20 +10,29 @@
     </radio-group>
     <text class="age">年龄 ▼</text>
     <view class="agesel">
-        <slider bindchange="ageslidermin" min="15" max="{{max}}" step="1" value="0" show-value />
-        <slider bindchange="ageslidermax" min="{{min}}" max="40" step="1" value="40" show-value />
+        <input class="inputminage" 
+        placeholder="输入年龄下限" 
+        type="text" />
+        <input class="inputmaxage" 
+        placeholder="输入年龄上限" 
+        type="text" />
     </view>
     <text class="school">学校 ▼</text>
-        <input class="inputschool" 
-        placeholder="请输入学校名称" 
-        type="text" />
+    <view class="schoolsel">
+        <picker bindchange="bindschChange" value="{{index}}" range="{{array}}">
+            <view class="picker">
+                目标学校：{{array[index]}}
+            </view>
+        </picker>
+    </view>
     <text class="education">学历 ▼</text>
-    <view class="edbl">
+    <radio-group class="edblo">
         <view qq:for="{{edblocks}}" 
         qq:for-item="edblock" 
         class="ed-block">
-            <view class="edsel">{{edblock.ed}}</view>
+            <view bindtap="changeed" data-ed="{{edblock.ed}}" qq:if="{{edblock.choose}}" class="edsel ed-active">{{edblock.ed}}</view>
+            <view bindtap="changeed" data-ed="{{edblock.ed}}" qq:if="{{!edblock.choose}}" class="edsel">{{edblock.ed}}</view>
         </view>
-    </view>
-    <view bindtap="Bindtapcomp" class="complete">完成</view>
+    </radio-group>
+    <view bindtap="bindtapcomp" class="complete">完成</view>
 </view>

@@ -23,7 +23,6 @@
     display: -webkit-flex;
     display: flex;
     flex-flow: column nowrap;
-    flex-grow: 1;
 }
 
 .info-block .user-head{
@@ -48,7 +47,6 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
-    flex-grow: 1;
 }
 
 .info-block .info-r{
@@ -56,14 +54,14 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    margin-right:40rpx;
+    margin-left:240rpx;
 }
 
 .info-block .ur-name{
     font-size:26rpx;
     font-family:PingFangSC-Regular,PingFang SC;
     font-weight:400;
-    color: #6385F4;
+    color:rgba(153,153,153,1);
 }
 
 .info-block .time{
@@ -75,9 +73,9 @@
 
 .info-block .chat{
     width:116rpx;
-    height:40rpx;
+    height:50rpx;
     text-align:center;
-    padding-top:9rpx;
+    padding-top:18rpx;
     background:rgba(99,133,244,1);
     border-radius:42rpx;
     border:2rpx solid rgba(90,122,226,1);
@@ -91,5 +89,4 @@
     width: 480rpx;
     height: 360rpx;
     padding-top: 1rpx;
-    box-shadow: 0 0 5px #888888;
 }
