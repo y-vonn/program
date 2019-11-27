@@ -18,11 +18,13 @@ Page({
         // 未知问题：只能拍照不能从本地相册获取
         qq.chooseImage({
             count:1,
-            sizeType:['original','compressed'],
+            sizeType:['compressed'],
             sourceType: ['album', 'camera'],
             success:function(res){
                 var avatar = res.tempFilePaths[0];
-                qq.uploadFile({
+                var size = avatar.size;
+                if(size<=2000000){
+                    qq.uploadFile({
                     url:app.globalData.url+"/uploadImage",
                     filePath: avatar,
                     name: 'file',
@@ -38,6 +40,13 @@ Page({
                     });
                     }
                 })
+                }else{
+                    qq.showToast({
+                        title:'上传图片不能大于2M!',
+                        icon:'none'
+                    })
+                }
+                
             },
             fail: function(res){
                 console.log(res)
