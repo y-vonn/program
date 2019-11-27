@@ -2,12 +2,11 @@ const app = getApp();
 Page({
     data:{
         path:"",
-        userInfo:{
-            avatarUrl: "../image/avatar.png"
-        }
+        userInfo:{}
     },
 
     onLoad(){
+        app.globalData.ourUserInfo.avatarUrl="avatar.png";
         this.setData({
             userInfo:app.globalData.ourUserInfo,
             path:app.globalData.url+"/image/"
