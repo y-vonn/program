@@ -9,6 +9,7 @@ function switch2Page() {
 
 Page({
   data: {
+      imgHead: app.globalData.url+"/image/",
       infos: []
   },
   onLoad: function(option){
@@ -16,7 +17,7 @@ Page({
       var getChatUserHandle = function(res) {
           this.setData({
               infos: res.data.users.map(dat => {
-                  return {head: app.globalData.url+"/image/"+dat.headUrl, name: dat.name, id: dat.id, time: util.formatTime(new Date(dat.time)).split(" ")[1]}
+                  return {head: dat.headUrl, name: dat.name, id: dat.id, time: util.formatTime(new Date(dat.time)).split(" ")[1]}
               })
           })
         //   console.log(this.data.infos)
@@ -29,7 +30,7 @@ Page({
   },
   BindViewTap(e) {
     qq.navigateTo({
-      url: '../chatPage/chatPage?id=' + e.currentTarget.dataset.id + "&name=" + e.currentTarget.dataset.name
+      url: '../chatPage/chatPage?id=' + e.currentTarget.dataset.id + "&name=" + e.currentTarget.dataset.name + "&head=" + e.currentTarget.dataset.head
     })
   },
   BindWatchTap(e) {

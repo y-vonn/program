@@ -2,56 +2,53 @@
 //获取应用实例
 const app = getApp()
 
-
-
 Page({
   data: {
       sexblocks: [{
-          choose: false,
-          sex:"男"
-          
+          sex:"男",
+          choose:false
       },{
-          choose: false,
-          sex:"女"
-          
+          sex:"女",
+          choose:false
       },{
-          choose: false,
-          sex:"不限"
+          sex:"不限",
+          choose:false
       }],
       edblocks: [{
-          ed:"大专"
+          ed:"大专",
+          choose:false
           
       },{
-          ed:"本科"
+          ed:"本科",
+          choose:false
           
       },{
-          ed:"硕士"
+          ed:"硕士",
+          choose:false
 
       },{
-          ed:"博士"
+          ed:"博士",
+          choose:false
           
       }],
 
+      array: ['不限','北京邮电大学', '南京邮电大学'],
+      objectArray: [
+      {
+        id: 0,
+        school: '不限'
+      },
+      {
+        id: 1,
+        school: '北京邮电大学'
+      },
+      {
+        id: 2,
+        school: '南京邮电大学'
+      }
+    ],
   },
 
-  ageslidermin:function(e){
-      this.setData({
-          min:e.detail.value
-      })
-  },
-
-  ageslidermax:function(f){
-      this.setData({
-          max:f.detail.value
-      })
-  },
-
- 
-  Bindtapcomp: function () {
-    qq.navigateTo({
-      url: '../maininterface/maininterface'
-    })
-  },
   changeSex: function(e) {
     var sex = e.currentTarget.dataset.sex
     if(sex == "男") {
@@ -102,5 +99,100 @@ Page({
             }]
         })
     }
-}
+},
+
+  changeed: function(e) {
+    var ed = e.currentTarget.dataset.ed
+    if(ed == "大专") {
+        this.setData({
+            edblocks: [{
+                choose: true,
+                ed:"大专"
+                
+            },{
+                choose: false,
+                ed:"本科"
+                
+            },{
+                choose: false,
+                ed:"硕士"
+            },{
+                choose: false,
+                ed:"博士"
+            
+            }]
+        })
+    }
+    else if(ed == "本科") {
+        this.setData({
+            edblocks: [{
+                choose: false,
+                ed:"大专"
+                
+            },{
+                choose: true,
+                ed:"本科"
+                
+            },{
+                choose: false,
+                ed:"硕士"
+            },{
+                choose: false,
+                ed:"博士"
+            
+            }]
+        })
+    }
+    else if(ed == "硕士") {
+        this.setData({
+            edblocks: [{
+                choose: false,
+                ed:"大专"
+                
+            },{
+                choose: false,
+                ed:"本科"
+                
+            },{
+                choose: true,
+                ed:"硕士"
+            },{
+                choose: false,
+                ed:"博士"
+            }]
+        })
+    }
+    else {
+        this.setData({
+            edblocks: [{
+                choose: false,
+                ed:"大专"
+                
+            },{
+                choose: false,
+                ed:"本科"
+                
+            },{
+                choose: false,
+                ed:"硕士"
+            },{
+                choose: true,
+                ed:"博士"
+            }]
+        })
+    }
+  },
+
+  bindschChange: function(e){
+      this.setData({
+        index: e.detail.value
+      })
+  },
+ 
+  bindtapcomp: function () {
+    qq.navigateTo({
+      url: '../maininterface/maininterface'
+    })
+  },
+
 })

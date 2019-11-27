@@ -11,7 +11,7 @@
             class="chat-view">
                 <view qq:if="{{!info.isOwner}}" class="chat-content">
                     <view class="user-info">
-                        <image qq:if="{{!info.isOwner}}" class="head-img" src="../image/user.png" />
+                        <image qq:if="{{!info.isOwner}}" class="head-img" src="{{toUserHead}}" />
                     </view>
                     <view class="chat-text">{{info.content}}</view>
                 </view>

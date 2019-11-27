@@ -5,8 +5,8 @@
     class="chat-view"
     scroll-y>
         <view class="user">
-            <image data-id="{{info.id}}" bindtap="BindWatchTap" src="{{info.head}}" width="45rpx" class="user-head" />
-            <view data-id="{{info.id}}" data-name="{{info.name}}" bindtap="BindViewTap" class="info">
+            <image data-id="{{info.id}}" bindtap="BindWatchTap" src="{{imgHead}}{{info.head}}" width="45rpx" class="user-head" />
+            <view data-id="{{info.id}}" data-name="{{info.name}}" data-head="{{info.head}}" bindtap="BindViewTap" class="info">
                 <view class="user-info">
                     <view class="name-m">{{info.name}}</view>
                     <view class="name-s">{{info.name}}</view>

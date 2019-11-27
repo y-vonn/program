@@ -51,7 +51,7 @@ Page({
     chatToHim:function(){
         var that = this;
         qq.navigateTo({
-            url:'../chatPage/chatPage?id=' + that.data.userInfo.userId + "&name=" + that.data.userInfo.nickname
+            url:'../chatPage/chatPage?id=' + that.data.userInfo.userId + "&name=" + that.data.userInfo.nickname + "&head=" + that.data.userInfo.avatarUrl
         })
     }
 });
