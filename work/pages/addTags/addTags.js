@@ -3,47 +3,43 @@ Page({
     data:{
         sysTags:[
             {
-                tag: "帅",
+                tag: "宅",
                 isSelect: false
             },
             {
-                tag: "帅1",
+                tag: "吃货",
                 isSelect: false
             },
             {
-                tag: "帅2",
+                tag: "佛系",
                 isSelect: false
             },
             {
-                tag: "帅3",
+                tag: "想恋爱",
                 isSelect: false
             },
             {
-                tag: "帅4",
+                tag: "霸道总裁",
                 isSelect: false
             },
             {
-                tag: "帅5",
+                tag: "阳光",
                 isSelect: false
             },
             {
-                tag: "帅6",
+                tag: "小仙女",
                 isSelect: false
             },
             {
-                tag: "帅7",
+                tag: "逗比",
                 isSelect: false
             },
             {
-                tag: "帅8",
+                tag: "慢热",
                 isSelect: false
             },
             {
-                tag: "帅9",
-                isSelect: false
-            },
-            {
-                tag: "帅10",
+                tag: "颜控",
                 isSelect: false
             }
         ],
@@ -51,17 +47,16 @@ Page({
         tag:"",
         userInfo:{},
         indexMap:{
-            "帅" : 0,
-            "帅1": 1,
-            "帅2": 2,
-            "帅3": 3,
-            "帅4": 4,
-            "帅5": 5,
-            "帅6": 6,
-            "帅7": 7,
-            "帅8": 8,
-            "帅9": 9,
-            "帅10": 10
+            "宅" : 0,
+            "吃货": 1,
+            "佛系": 2,
+            "想恋爱": 3,
+            "霸道总裁": 4,
+            "阳光": 5,
+            "小仙女": 6,
+            "逗比": 7,
+            "慢热": 8,
+            "颜控": 9
         },
     },
     onLoad(){

@@ -162,7 +162,7 @@
     height: 50rpx;
     border:1rpx solid #979797;
     border-radius:25rpx;
-    color:#ECA733;
+    color:#FFFFFF;
     background:#6385F4;
     line-height:40rpx;
 }
