@@ -1,0 +1,27 @@
+.container{
+    padding: 0 0;
+    width: 750rpx;
+    height:1300rpx;
+}
+
+swiper{
+    height: 1300rpx;
+}
+
+.container .ani{
+    width: 750rpx;
+    height:1300rpx;
+    align-items:center;
+}
+
+.container .img1{
+    width: 750rpx;
+    height:1300rpx;
+    align-items:center;
+}
+
+.container .img2{
+    width: 750rpx;
+    height:1300rpx;
+    align-items:center;
+}
