@@ -15,33 +15,64 @@ Page({
       }]
   },
   onLoad: function(option) {
+    console.log(option)
     var that = this
-    qq.request({
-      url: "https://app.imoe.net.cn/user/selectByCondition",
-      method: "POST",
-      dataType: "json",
-      data: {
-        gender:1,
-        school:"北京邮电大学",
-        low:0,
-        high:100
-      },
-      success(res){
-        console.log(res)
-        that.setData({
-          blocks: res.data.map(info => {
-            var photo = "" 
-            if(info.photos){
-              photo =  info.photos.split(",")[0]
-            }
-            else{
-              photo = ""
-            }
-            return {userId: info.userId, headUrl: info.avatarUrl, picUrl: photo, name: info.nickname, pst:1}
+    if(option.sex){
+      qq.request({
+        url: "https://app.imoe.net.cn/user/selectByCondition",
+        method: "POST",
+        dataType: "json",
+        data: {
+          gender: option.sex,
+          school: option.school,
+          low: option.low,
+          high: option.high
+        },
+        success(res){
+          console.log(res)
+          that.setData({
+            blocks: res.data.map(info => {
+              var photo = "" 
+              if(info.photos){
+                photo =  info.photos.split(",")[0]
+              }
+              else{
+                photo = ""
+              }
+              return {userId: info.userId, headUrl: info.avatarUrl, picUrl: photo, name: info.nickname, pst:1}
+            })
           })
-        })
-      }
-    })
+        }
+      })
+    }
+    else{
+      qq.request({
+        url: "https://app.imoe.net.cn/user/selectByCondition",
+        method: "POST",
+        dataType: "json",
+        data: {
+          gender: 2,
+          school: "",
+          low: 0,
+          high: 100
+        },
+        success(res){
+          console.log(res)
+          that.setData({
+            blocks: res.data.map(info => {
+              var photo = "" 
+              if(info.photos){
+                photo =  info.photos.split(",")[0]
+              }
+              else{
+                photo = ""
+              }
+              return {userId: info.userId, headUrl: info.avatarUrl, picUrl: photo, name: info.nickname, pst:1}
+            })
+          })
+        }
+      })
+    }
   },
   Bindtapsl: function () {
     qq.navigateTo({

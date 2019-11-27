@@ -1,9 +1,19 @@
 //select.js
 //获取应用实例
 const app = getApp()
+function getSchool() {
+    var school = document.getElementById("school").value
+    return school
+}
 
 Page({
   data: {
+      info: {
+          sex: 2,
+          school: "",
+          low: 0,
+          high: 100
+      },
       sexblocks: [{
           sex:"男",
           choose:false
@@ -53,6 +63,7 @@ Page({
     var sex = e.currentTarget.dataset.sex
     if(sex == "男") {
         this.setData({
+            "info.sex": 1,
             sexblocks: [{
                 choose: true,
                 sex:"男"
@@ -69,6 +80,7 @@ Page({
     }
     else if(sex == "女") {
         this.setData({
+            "info.sex": 0,
             sexblocks: [{
                 choose: false,
                 sex:"男"
@@ -85,6 +97,7 @@ Page({
     }
     else {
         this.setData({
+            "info.sex": 2,
             sexblocks: [{
                 choose: false,
                 sex:"男"
@@ -184,14 +197,35 @@ Page({
   },
 
   bindschChange: function(e){
+      var sch = ""
+      if(this.data.array[e.detail.value] == "不限"){
+          sch = ""
+      }
+      else{
+          sch = this.data.array[e.detail.value]
+      }
       this.setData({
+        "info.school": sch,
         index: e.detail.value
+      })
+  },
+
+  bindlowChange: function(e) {
+      this.setData({
+        "info.low": e.detail.value,
+      })
+  },
+
+  bindhighChange: function(e) {
+      this.setData({
+        "info.high": e.detail.value,
       })
   },
  
   bindtapcomp: function () {
-    qq.navigateTo({
-      url: '../maininterface/maininterface'
+    var that = this
+    qq.reLaunch({
+      url: '../maininterface/maininterface'+'?sex='+that.data.info.sex+'&school='+that.data.info.school+'&low='+that.data.info.low+'&high='+that.data.info.high
     })
   },
 

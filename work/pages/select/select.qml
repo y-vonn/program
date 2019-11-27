@@ -11,13 +11,15 @@
     <text class="age">年龄 ▼</text>
     <view class="agesel">
         <input class="inputminage" 
+        bindchange="bindlowChange"
         placeholder="输入年龄下限" 
-        type="text" />
+        type="number" />
         <input class="inputmaxage" 
+        bindchange="bindhighChange"
         placeholder="输入年龄上限" 
-        type="text" />
+        type="number" />
     </view>
-    <text class="school">学校 ▼</text>
+    <text class="school" id="school">学校 ▼</text>
     <view class="schoolsel">
         <picker bindchange="bindschChange" value="{{index}}" range="{{array}}">
             <view class="picker">

@@ -19,7 +19,8 @@
     "pages/chatPage/chatPage",
     "pages/logs/logs",
 
-    "pages/maininterface/maininterface"
+    "pages/maininterface/maininterface",
+    "pages/select/select"
   ],
   "tabBar": {
     "color":"#7F8389",
