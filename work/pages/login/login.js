@@ -14,8 +14,8 @@ Page({
             }
         })
         qq.showShareMenu({
-            showShareItems: null
-        })
+      showShareItems:  ['qq', 'qzone', 'wechatFriends', 'wechatMoment']
+    })
     },
 
     getUserInfo:function(){

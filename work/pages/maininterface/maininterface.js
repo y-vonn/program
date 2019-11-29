@@ -14,7 +14,10 @@ Page({
           
       }]
   },
-  onLoad: function(option) {
+  onLoad(option) {
+    qq.showShareMenu({
+      showShareItems:  ['qq', 'qzone', 'wechatFriends', 'wechatMoment']
+    })
     console.log(option)
     var that = this
     if(option.sex){
@@ -73,9 +76,6 @@ Page({
         }
       })
     }
-    qq.showShareMenu({
-      showShareItems: null
-    })
   },
   Bindtapsl: function () {
     qq.navigateTo({

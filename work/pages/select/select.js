@@ -59,6 +59,11 @@ Page({
     ],
   },
 
+    onLoad(){
+        qq.showShareMenu({
+      showShareItems:  ['qq', 'qzone', 'wechatFriends', 'wechatMoment']
+    })
+    },
   changeSex: function(e) {
     var sex = e.currentTarget.dataset.sex
     if(sex == "男") {

@@ -6,6 +6,9 @@ Page({
     },
 
     onLoad(){
+        qq.showShareMenu({
+      showShareItems:  ['qq', 'qzone', 'wechatFriends', 'wechatMoment']
+    })
         app.globalData.ourUserInfo.avatarUrl="avatar.png";
         this.setData({
             userInfo:app.globalData.ourUserInfo,

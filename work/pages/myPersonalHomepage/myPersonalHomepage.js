@@ -8,6 +8,7 @@ Page({
         tags:[]
     },
     onLoad(){
+        
         var p = app.globalData.ourUserInfo.photos;
         var ps = p.split(",");
         var photo = [];
@@ -33,8 +34,8 @@ Page({
             photos:photo,
             tags:tags
         });
-        qq.showShareMenu({
-            showShareItems: null
+         qq.showShareMenu({
+            showShareItems:  ['qq', 'qzone', 'wechatFriends', 'wechatMoment']
         })
     },
     editInfo:function(e){

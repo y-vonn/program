@@ -10,6 +10,9 @@ Page({
     },
     // 传入他人id，后台数据更新本页面
     onLoad(option){
+        qq.showShareMenu({
+      showShareItems:  ['qq', 'qzone', 'wechatFriends', 'wechatMoment']
+    })
         var that = this;
         var userId = option.id;
         qq.request({

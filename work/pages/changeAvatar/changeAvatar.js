@@ -9,7 +9,10 @@ Page({
         this.setData({
             path: app.globalData.url+"/image/",
             avatar: app.globalData.ourUserInfo.avatarUrl
-        })
+        });
+        qq.showShareMenu({
+      showShareItems:  ['qq', 'qzone', 'wechatFriends', 'wechatMoment']
+    })
     },
     picSelect:function(e){
         var that = this;

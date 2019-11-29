@@ -10,6 +10,9 @@ Page({
         this.setData({
             userInfo:app.globalData.ourUserInfo
         })
+        qq.showShareMenu({
+      showShareItems:  ['qq', 'qzone', 'wechatFriends', 'wechatMoment']
+    })
     },
     
     textNumber:function(e){

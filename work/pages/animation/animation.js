@@ -3,7 +3,11 @@
 const app = getApp()
 
 Page({
-  
+  onLoad(){
+    qq.showShareMenu({
+      showShareItems:  ['qq', 'qzone', 'wechatFriends', 'wechatMoment']
+    })
+  },
   bindani: function () {
     qq.reLaunch({
         url: '../login/login'

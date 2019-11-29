@@ -29,8 +29,8 @@ Page({
       })
 
       qq.showShareMenu({
-        showShareItems: null
-      })
+      showShareItems:  ['qq', 'qzone', 'wechatFriends', 'wechatMoment']
+    })
   },
   BindViewTap(e) {
     qq.navigateTo({

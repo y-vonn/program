@@ -14,7 +14,9 @@ Page({
   onLoad: function(option) {
       console.log(option)
       var that = this
-      
+      qq.showShareMenu({
+      showShareItems:  ['qq', 'qzone', 'wechatFriends', 'wechatMoment']
+    })
       this.setData({
           name: option.name,
           user: app.globalData.ourUserInfo.userId,
