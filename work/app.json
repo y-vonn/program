@@ -6,11 +6,8 @@
     "pages/inputNameAndSchool/inputNameAndSchool",
     "pages/addTags/addTags",
     "pages/otherPersonalHomepage/otherPersonalHomepage",
-    
     "pages/index/index",
-    
     "pages/editMyInfo/editMyInfo",
-    
     "pages/selectAvatar/selectAvatar",
     "pages/inputAgeAndGender/inputAgeAndGender",
     "pages/changeAvatar/changeAvatar",

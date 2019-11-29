@@ -9,7 +9,7 @@
     position: absolute;
     top:928rpx;
     left:285rpx;
-    width: 180rpx;
+    width: 200rpx;
     height: 54rpx;
     background:#FFFFFF;
     border: 1rpx solid #6385F4;
