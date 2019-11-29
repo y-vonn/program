@@ -13,6 +13,9 @@ Page({
                 that.getUserInfo();
             }
         })
+        qq.showShareMenu({
+            showShareItems: null
+        })
     },
 
     getUserInfo:function(){

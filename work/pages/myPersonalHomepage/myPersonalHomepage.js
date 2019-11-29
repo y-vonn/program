@@ -33,6 +33,9 @@ Page({
             photos:photo,
             tags:tags
         });
+        qq.showShareMenu({
+            showShareItems: null
+        })
     },
     editInfo:function(e){
         qq.navigateTo({

@@ -27,6 +27,10 @@ Page({
           url: "https://app.imoe.net.cn/workTest/user/getChatUser?id=" +  app.globalData.ourUserInfo.userId,
           success(res){getChatUserHandle(res)}
       })
+
+      qq.showShareMenu({
+        showShareItems: null
+      })
   },
   BindViewTap(e) {
     qq.navigateTo({

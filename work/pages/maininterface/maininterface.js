@@ -73,6 +73,9 @@ Page({
         }
       })
     }
+    qq.showShareMenu({
+      showShareItems: null
+    })
   },
   Bindtapsl: function () {
     qq.navigateTo({
