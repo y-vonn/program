@@ -1,50 +1,11 @@
 {
-	"projectid": "1109993068_work",
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
-		"postcss": false,
+		"postcss": true,
 		"minified": true,
-		"newFeature": true,
-		"autoAudits": true,
-		"remoteDebugLogEnable": false,
-		"uploadWithSourceMap": true,
-		"nodeModules": true,
-		"uglifyFileName": true
+		"newFeature": true
 	},
-	"qqLibVersion": "1.8.0",
-	"compileType": "miniprogram",
-	"createTime": 1573006490650,
-	"accessTime": 1573006490650,
-	"packOptions": {
-		"ignore": []
-	},
-	"debugOptions": {
-		"hidedInDevtools": []
-	},
-	"qqappid": "1109993068",
-	"projectname": "work",
-	"scripts": {
-		"beforeCompile": "",
-		"beforePreview": "",
-		"beforeUpload": ""
-	},
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"currentL": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": -1,
-			"list": []
-		}
-	}
+	"appid": "testappId",
+	"projectname": "work3"
 }

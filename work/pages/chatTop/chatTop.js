@@ -3,10 +3,6 @@
 const app = getApp()
 const util = require('../../utils/util.js')
 
-function switch2Page() {
-    document.getElementById
-}
-
 Page({
   data: {
       imgHead: app.globalData.url+"/image/",
@@ -18,28 +14,29 @@ Page({
           this.setData({
               infos: res.data.users.map(dat => {
                   return {head: dat.headUrl, name: dat.name, id: dat.id, time: util.formatTime(new Date(dat.time)).split(" ")[1]}
-              })
+                })
           })
         //   console.log(this.data.infos)
       }.bind(this)
       
-      qq.request({
-          url: "https://app.imoe.net.cn/workTest/user/getChatUser?id=" +  app.globalData.ourUserInfo.userId,
+      tt.request({
+          url: "https://llxxtest.xyz/workTest/user/getChatUser?id=" +  app.globalData.testInfo,
           success(res){getChatUserHandle(res)}
       })
 
-      qq.showShareMenu({
+      tt.showShareMenu({
         showShareItems: null
       })
   },
   BindViewTap(e) {
-    qq.navigateTo({
+    tt.navigateTo({
       url: '../chatPage/chatPage?id=' + e.currentTarget.dataset.id + "&name=" + e.currentTarget.dataset.name + "&head=" + e.currentTarget.dataset.head
     })
   },
   BindWatchTap(e) {
-      qq.navigateTo({
-      url: '../otherPersonalHomepage/otherPersonalHomepage?id=' + e.currentTarget.dataset.id
+      tt.navigateTo({
+      // url: '../otherPersonalHomepage/otherPersonalHomepage?id=' + e.currentTarget.dataset.id
+      url: '../index/index'
     })
   }
 })

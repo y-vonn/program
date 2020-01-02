@@ -1,57 +1,13 @@
 {
   "pages":[
-    "pages/animation/animation",
-    "pages/login/login",
-    "pages/myPersonalHomepage/myPersonalHomepage",
-    "pages/inputNameAndSchool/inputNameAndSchool",
-    "pages/addTags/addTags",
-    "pages/otherPersonalHomepage/otherPersonalHomepage",
-    
-    "pages/index/index",
-    
-    "pages/editMyInfo/editMyInfo",
-    
-    "pages/selectAvatar/selectAvatar",
-    "pages/inputAgeAndGender/inputAgeAndGender",
-    "pages/changeAvatar/changeAvatar",
-    "pages/personalSign/personalSign",
-    "pages/editNickname/editNickname",
     "pages/chatTop/chatTop",
     "pages/chatPage/chatPage",
-    "pages/logs/logs",
-
-    "pages/maininterface/maininterface",
-    "pages/select/select"
+    "pages/index/index"
   ],
-  "tabBar": {
-    "color":"#7F8389",
-    "selectedColor":"#6385F4",
-    "backgroundColor":"#FFFFFF",
-    "list": [
-      {
-        "pagePath": "pages/maininterface/maininterface",
-        "iconPath":"pages/image/home.png",
-        "selectedIconPath": "pages/image/home_select.png",
-        "text": "发现"
-      },
-      {
-        "pagePath": "pages/chatTop/chatTop",
-        "iconPath":"pages/image/chat.png",
-        "selectedIconPath": "pages/image/chat_select.png",
-        "text": "聊天"
-      },
-      {
-        "pagePath": "pages/myPersonalHomepage/myPersonalHomepage",
-        "iconPath":"pages/image/my.png",
-        "selectedIconPath": "pages/image/my_select.png",
-        "text": "我的"
-      }
-    ]
-  },
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "QQ小程序",
+    "navigationBarTitleText": "Mini Program",
     "navigationBarTextStyle":"black"
   }
 }

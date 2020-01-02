@@ -1,7 +1,7 @@
 <view class="container">
     <scroll-view
-    qq:for="{{infos}}"
-    qq:for-item="info"
+    tt:for="{{infos}}"
+    tt:for-item="info"
     class="chat-view"
     scroll-y>
         <view class="user">
