@@ -1,0 +1,66 @@
+.info{
+    margin-top:30rpx;
+    margin-left:175rpx;
+    display:flex;
+    width:400rpx;
+    flex-direction:column;
+    align-items:center;
+}
+
+.info image{
+    width:180rpx;
+    height:180rpx;
+    border-radius:90rpx;
+}
+
+.nickname{
+    margin-top:10rpx;
+    font-size:34rpx;
+    color:#333333;
+    line-height:48rpx;
+    font-family: PingFangSC-Regular,PingFang SC;
+}
+
+.personalSign{
+    margin-top:6rpx;
+    font-size:22rpx;
+    color:#9B9B9B;
+    line-height:30rpx;
+    word-break:break-all;
+    font-family: PingFangSC-Regular,PingFang SC;
+}
+
+.tips{
+    margin-top:244rpx;
+    font-size:20rpx;
+    width:284rpx;
+    color:#999999;
+    line-height:28rpx;
+    text-align:center;
+    word-break:break-all;
+    font-family: PingFangSC-Regular,PingFang SC;
+}
+
+.login{
+    width:350rpx;
+    height:90rpx;
+    margin-top:20rpx;
+    background:#6385F4;
+    border: 1rpx solid #5A7AE2;
+    border-radius: 60rpx;
+}
+
+.login2{
+    width:350rpx;
+    height:90rpx;
+    margin-top:20rpx;
+    background:#999999;
+    border: 1rpx solid #666666;
+    border-radius: 60rpx;
+}
+
+.login text{
+    color:#FFFFFF;
+    font-size:34rpx;
+    font-family: PingFangSC-Regular,PingFang SC;
+}

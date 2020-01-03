@@ -1,7 +1,17 @@
 {
   "pages":[
-    "pages/chatTop/chatTop",
-    "pages/chatPage/chatPage",
+    "pages/login/login",
+    "pages/addTags/addTags",
+    "pages/changeAvatar/changeAvatar",
+    "pages/editMyInfo/editMyInfo",
+    "pages/editNickname/editNickname",
+    "pages/inputAgeAndGender/inputAgeAndGender",
+    "pages/inputNameAndSchool/inputNameAndSchool",
+    
+    "pages/myPersonalHomepage/myPersonalHomepage",
+    "pages/otherPersonalHomepage/otherPersonalHomepage",
+    "pages/personalSign/personalSign",
+    "pages/selectAvatar/selectAvatar",
     "pages/index/index"
   ],
   "window":{

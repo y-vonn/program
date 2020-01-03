@@ -1,0 +1,129 @@
+.user-nickname{
+    position: absolute;
+    color:#333333;
+    font-size:34rpx;
+    top: 85rpx;
+    left: 316rpx;
+}
+
+.weChat{
+    position: absolute;
+    top: 142rpx;
+    left: 310rpx;
+    width:118rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    border-radius: 23.5rpx;
+    background-color: #6385F4;
+    border: 1rpx solid #5A7AE2;
+}
+
+.weChat text{
+    font-size: 26rpx;
+    color:#FFFFFF;
+    font-family: PingFangSC-Regular,PingFang SC;
+}
+
+.noPhoto{
+    display:flex;
+    flex-direction:row;
+    width:223rpx;
+    height:339rpx;
+    margin-top:9rpx;
+    margin-right:9rpx;
+    background:#FFFFFF;
+    border: 1rpx solid #979797;
+    color:#9B9B9B;
+    font-size:28rpx;
+    font-family:PingFangSC-Regular,PingFang SC;
+    align-items:center;
+    justify-content:center;
+}
+
+.user-avatar{
+    position: absolute;
+    top: 48rpx;
+    left: 80rpx;
+    width: 180rpx;
+    height: 180rpx;
+    border-radius: 90rpx;
+}
+
+.info{
+    display:flex;
+    flex-direction:column;
+}
+.personalInfo{
+    margin-top: 250rpx;
+    margin-left: 80rpx;
+    color: #666666;
+    font-size: 26rpx;
+    font-family: PingFangSC-Regular,PingFang SC;
+}
+
+.personalSign{
+    margin-top: 20rpx;
+    margin-left: 80rpx;
+    width: 590rpx;
+    word-break: keep-all;
+    word-wrap: break-word;
+    color: #666666;
+    font-size: 26rpx;
+    font-family: PingFangSC-Regular,PingFang SC;
+}
+
+.personalTag{
+    margin-top: 20rpx;
+    margin-left: 80rpx;
+    color: #666666;
+    font-size: 26rpx;
+    font-family: PingFangSC-Regular,PingFang SC;
+}
+
+.myTag{
+    margin-left:80rpx;
+    margin-top:10rpx;
+    width:590rpx;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+}
+
+.tag{
+    font-size:26rpx;
+    font-family: PingFangSC-Regular,PingFang SC;
+}
+
+.tagButton{
+    width:150rpx;
+    height: 50rpx;
+    margin-right: 10rpx;
+    border:1rpx solid #979797;
+    border-radius:25rpx;
+    color:#FFFFFF;
+    background:#6385F4;
+    line-height:50rpx;
+}
+
+.otherPhotoWall{
+    color:#333333;
+    font-size:26rpx;
+    margin-top:20rpx;
+    margin-left:80rpx;
+    font-family:PingFangSC-Regular,PingFang SC;
+}
+
+.photoWall{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    margin-left:30rpx;
+    margin-top:10rpx;
+}
+
+.photo{
+    width:224rpx;
+    height:340rpx;
+    margin: 0rpx 4.5rpx;
+}
+

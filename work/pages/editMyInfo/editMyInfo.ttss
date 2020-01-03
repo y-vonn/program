@@ -1,0 +1,146 @@
+.divLines{
+    position: absolute;
+    top: 80rpx;
+    left: 30rpx;
+    width: 690rpx;
+    height: 561rpx;
+    display: flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    align-items:baseline;
+}
+
+.divLine{
+    background: #eeeeee;
+    width:690rpx;
+    height: 1rpx;
+}
+
+.infoList{
+    position: absolute;
+    top: 18rpx;
+    left: 30rpx;
+    width: 96rpx;
+    height: 560rpx;
+    display: flex;
+    flex-direction:column;
+    justify-content:space-around;
+}
+
+.info{
+    color: #333333;
+    font-size: 24rpx;
+    font-family: PingFangSC-Regular,PingFang SC;
+}
+
+
+.inputNickname{
+    position: absolute;
+    top: 171rpx;
+    left: 400rpx;
+    width: 267rpx;
+    height: 28rpx;
+    text-align:right;
+    font-size:20rpx;
+    font-family:PingFangSC-Regular,PingFang SC;
+}
+
+.placeholderClass{
+    text-align:right;
+    font-size:20rpx;
+    color:#333333;
+    font-family:PingFangSC-Regular,PingFang SC;
+}
+
+.date{
+    position: absolute;
+    top: 241rpx;
+    left: 547rpx;
+    width:120rpx;
+    height:28rpx;
+    font-size: 20rpx;
+    text-align:right;
+    font-size:20rpx;
+    font-family:PingFangSC-Regular,PingFang SC;
+}
+
+.star{
+    position: absolute;
+    top: 311rpx;
+    left: 547rpx;
+    width:120rpx;
+    height:28rpx;
+    font-size: 20rpx;
+    text-align:right;
+    font-size:20rpx;
+    font-family:PingFangSC-Regular,PingFang SC;
+}
+
+.inputAge{
+    position: absolute;
+    top: 381rpx;
+    left: 400rpx;
+    width: 267rpx;
+    height: 28rpx;
+    text-align:right;
+    font-size:20rpx;
+    font-family:PingFangSC-Regular,PingFang SC;
+}
+
+.inputSign{
+    position: absolute;
+    top: 521rpx;
+    left: 400rpx;
+    width: 267rpx;
+    height: 28rpx;
+    text-align:right;
+    font-size:20rpx;
+    font-family:PingFangSC-Regular,PingFang SC;
+}
+
+.gender{
+    position: absolute;
+    top: 451rpx;
+    left: 400rpx;
+    width: 267rpx;
+    height: 28rpx;
+    text-align:right;
+    font-size:20rpx;
+    color:#9B9B9B;
+    font-family:PingFangSC-Regular,PingFang SC;
+}
+
+.Id{
+    position: absolute;
+    top: 31rpx;
+    left: 400rpx;
+    width: 267rpx;
+    height: 28rpx;
+    text-align:right;
+    font-size:20rpx;
+    color:#9B9B9B;
+    font-family:PingFangSC-Regular,PingFang SC;
+}
+
+.school{
+    position: absolute;
+    top: 101rpx;
+    left: 400rpx;
+    width: 267rpx;
+    height: 28rpx;
+    text-align:right;
+    font-size:20rpx;
+    color:#9B9B9B;
+    font-family:PingFangSC-Regular,PingFang SC;
+}
+
+.arrow{
+    position:relative;
+    top: -30rpx;
+    left: 290rpx;
+    width: 5px;
+    height: 5px;
+    border-top: 1px solid #979797;
+    border-right: 1px solid #979797;
+    transform: rotate(45deg);
+}
