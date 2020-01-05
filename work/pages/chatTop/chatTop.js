@@ -20,7 +20,7 @@ Page({
       }.bind(this)
       
       tt.request({
-          url: "https://llxxtest.xyz/workTest/user/getChatUser?id=" +  app.globalData.testInfo,
+          url: "https://llxxtest.xyz/workTest/user/getChatUser?id=" +  app.globalData.ourUserInfo.userId,
           success(res){getChatUserHandle(res)}
       })
 

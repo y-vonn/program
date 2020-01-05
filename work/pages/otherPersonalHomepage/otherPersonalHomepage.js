@@ -13,7 +13,7 @@ Page({
         var that = this;
         var userId = option.id;
         tt.request({
-            url:"https://app.imoe.net.cn/user/getUser?userId="+userId,
+            url:"https://llxxtest.xyz/user/getUser?userId="+userId,
             method:"GET",
             success(res){
                 that.setData({

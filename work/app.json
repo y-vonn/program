@@ -1,19 +1,51 @@
 {
   "pages":[
     "pages/login/login",
-    "pages/addTags/addTags",
-    "pages/changeAvatar/changeAvatar",
-    "pages/editMyInfo/editMyInfo",
-    "pages/editNickname/editNickname",
-    "pages/inputAgeAndGender/inputAgeAndGender",
-    "pages/inputNameAndSchool/inputNameAndSchool",
-    
     "pages/myPersonalHomepage/myPersonalHomepage",
+    "pages/inputNameAndSchool/inputNameAndSchool",
+    "pages/addTags/addTags",
     "pages/otherPersonalHomepage/otherPersonalHomepage",
-    "pages/personalSign/personalSign",
+    
+    "pages/index/index",
+    
+    "pages/editMyInfo/editMyInfo",
+    
     "pages/selectAvatar/selectAvatar",
-    "pages/index/index"
+    "pages/inputAgeAndGender/inputAgeAndGender",
+    "pages/changeAvatar/changeAvatar",
+    "pages/personalSign/personalSign",
+    "pages/editNickname/editNickname",
+    "pages/chatTop/chatTop",
+    "pages/chatPage/chatPage",
+
+    "pages/maininterface/maininterface",
+    "pages/select/select"
   ],
+  "tabBar": {
+    "color":"#7F8389",
+    "selectedColor":"#6385F4",
+    "backgroundColor":"#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/maininterface/maininterface",
+        "iconPath":"pages/image/home.png",
+        "selectedIconPath": "pages/image/home_select.png",
+        "text": "发现"
+      },
+      {
+        "pagePath": "pages/chatTop/chatTop",
+        "iconPath":"pages/image/chat.png",
+        "selectedIconPath": "pages/image/chat_select.png",
+        "text": "聊天"
+      },
+      {
+        "pagePath": "pages/myPersonalHomepage/myPersonalHomepage",
+        "iconPath":"pages/image/my.png",
+        "selectedIconPath": "pages/image/my_select.png",
+        "text": "我的"
+      }
+    ]
+  },
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",

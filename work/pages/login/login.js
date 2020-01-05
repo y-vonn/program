@@ -36,7 +36,7 @@ Page({
         })
     },
     login:function(){
-        console.log(app.globalData.ourUserInfo);
+        console.log("login over" + app.globalData.ourUserInfo);
         if(this.data.userInfo.school==""){
             tt.redirectTo({
                 url:"../inputAgeAndGender/inputAgeAndGender"

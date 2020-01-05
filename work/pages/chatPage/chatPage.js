@@ -36,7 +36,7 @@ Page({
       }.bind(this)
 
       qq.request({
-          url: "https://app.imoe.net.cn/workTest/user/getChatUserData?userId=" + app.globalData.ourUserInfo.userId + "&targetId=" + option.id,
+          url: "https://llxxtest.xyz/workTest/user/getChatUserData?userId=" + app.globalData.ourUserInfo.userId + "&targetId=" + option.id,
           success(res){getUserChatData(res)}
       })
 

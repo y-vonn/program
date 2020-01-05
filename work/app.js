@@ -1,29 +1,32 @@
 App({
   onLaunch: function () {
-      this.userLogin();
+    var that = this;
+    // this.userLogin();
   },
 
-  userLogin:function(){
+  userLogin:function(){ 
     var that = this;
     return new Promise(function(reslove, reject){
       tt.login({
-        success: res => {
-          if(res.code){
-            that.globalData.code = res.code;
-            var res ={
-              status: 200,
-              data:"success"
-            }
-            reslove(res);
-          }else{
-            var res ={
-              status:300,
-              data:"error"
-            }
-            reject("error");
+      success: res => {
+        if(res.code){
+          that.globalData.code = res.code;
+          console.log(res.code);
+          var res ={
+            status: 200,
+            data:"success"
           }
+          reslove(res);
+        }else{
+          var res={
+            status: 300,
+            data:"error"
+          }
+          reject("error");
         }
-      })
+        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+      }
+    })
     })
   },
   globalData: {
